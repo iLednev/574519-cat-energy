@@ -1,3 +1,57 @@
-body {
-  background: blueviolet;
+@font-face {
+  font-family: "Oswald";
+  src:
+    local("Oswald-Medium"),
+    url("../fonts/oswaldmedium.woff2"),
+    url("../fonts/oswaldmedium.woff");
+  font-weight: 600;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Oswald";
+  src:
+    local("Oswald-Regular"),
+    url("../fonts/oswaldregular.woff2"),
+    url("../fonts/oswaldregular.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@path: "../less/blocks/";
+
+.arial() {
+  margin: 0;
+
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.base-paddings() {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.font-settings(@fontsize: 20px, @lineheight: 20px, @fontweight: 600) {
+  font-size: @fontsize;
+  line-height: @lineheight;
+  font-weight: @fontweight;
+}
+
+.list-reset() {
+  list-style: none;
+  margin: 0;
+}
+
+@import "blocks/button/button.less";
+
+@import "blocks/body/body.less";
+@import "blocks/main-header/main-header.less";
+@import "blocks/promo/promo.less";
+@import "blocks/programs/programs.less";
+@import "blocks/how-works/how-works.less";
+@import "blocks/example/example.less";
