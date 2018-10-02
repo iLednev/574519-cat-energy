@@ -1,5 +1,30 @@
 .promo {
+  box-sizing: border-box;
   width: 320px;
-  height: 305px;
+  min-height: 380px;
+  .base-paddings();
+  padding-top: 30px;
+  outline: 2px solid black;
   background-image: url("@{path}promo/img/index-background-mobile@1x.jpg");
+  background-size: 320px 305px;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+}
+
+.promo__heading {
+  margin: 0;
+  margin-top: 0;
+  .font-settings(36px, 36px, 400);
+}
+
+.promo__lead {
+  margin: 0;
+  .font-settings(14px, 14px, 400);
+}
+
+.promo__image-wrapper {
+  margin: 0;
+  width: 280px;
+  height: 270px;
 }
