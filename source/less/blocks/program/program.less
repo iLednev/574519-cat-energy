@@ -1,0 +1,63 @@
+.program {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  background-color: #f2f2f2;
+}
+
+.program__heading {
+  position: relative;
+  margin: 0;
+  margin-bottom: 36px;
+  padding: 0;
+  padding-left: 70px;
+  .font-settings(24px, 37px, 400);
+}
+
+.program__heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: @green;
+}
+
+.program__heading--slim::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 35px;
+  height: 49px;
+  background-image: url("@{path}program/img/icon-cat-slim.svg");
+  background-repeat: no-repeat;
+}
+
+.program__heading--pro::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 67px;
+  height: 28px;
+  background-image: url("@{path}program/img/icon-cat-pro.svg");
+  background-repeat: no-repeat;
+}
+
+.program__description {
+  .standard-arial();
+  margin-bottom: 44px;
+}
+
+.program__link {
+  margin-bottom: 22px;
+  .font-settings(16px, 16px, 400);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #111111;
+}
