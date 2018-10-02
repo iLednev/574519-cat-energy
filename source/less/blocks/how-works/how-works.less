@@ -1,6 +1,5 @@
 .how-works {
   .base-paddings();
-  margin-bottom: 22px;
   outline: 2px solid red;
 }
 
@@ -11,14 +10,23 @@
 }
 
 .how-works__list {
+  display: flex;
   .list-reset();
   .standard-arial();
 }
 
 .how-works__item {
-  position: relative;
   margin-bottom: 20px;
 }
+
+/*  Дилемма. Как лучше - склеить margin-ы у .body__how-works и .how-works__item
+для образования общего отступа, который будет толкать следующий блок (сработает
+это при подключении флексбоксов);
+
+Или обнулить margin у .how-works__item:last-child и увеличить его у .body__how-works?
+
+Или вообще сделать паддинг у .body__how-works и оставить маргин у .how-works__item?
+Получается уже трилемма какая-то, а не дилемма...  */
 
 .how-works__icon {
   margin-right: 20px;
