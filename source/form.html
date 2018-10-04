@@ -11,70 +11,102 @@
       <a class="main-header__logo" href="#">
         <img class="main-header__logo-image" src="http://placehold.it/150x100" alt="Логотип магазина">
       </a>
+      <button class="main-nav__button button-burger" type="button">Меню</button>
 
       <nav class="main-header__nav main-nav">
-        <button class="main-nav__button button-burger" type="button">Меню</button>
         <ul class="main-nav__menu menu">
-          <li class="main-nav__item"><a href="index.html">Главная</a></li>
-          <li class="main-nav__item"><a href="catalog.html">Каталог продукции</a></li>
-          <li class="main-nav__item"><a href="#">Подбор программы</a></li>
+          <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+          <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Подбор программы</a></li>
         </ul>
       </nav>
     </header>
 
     <h1 class="body__main-heading">Подбор программы</h1>
 
-    <main class="main">
+    <main>
       <section class="main__item form">
         <form class="form__form" action="https://echo.htmlacademy.ru" method="POST">
-          <p class="form__item form__item--description">
+          <p class="form__description">
             Заполните анкету и мы подберем программу питания для вашего кота
           </p>
 
-          <fieldset class="form__item fields">
-            <label class="fields__label" for="user-name">Имя:*</label>
-            <input class="fields__input" type="text" id="user-name" name="user-name" placeholder="Барсик">
-            <label class="fields__label" for="user-weight">Вес (кг):*</label>
-            <input class="fields__input" type="number" id="user-weight" name="user-weight" placeholder="7">
-            <label class="fields__label" for="user-age">Возраст (лет):</label>
-            <input class="fields__input" type="number" id="user-age" name="user-age" placeholder="7">
+          <fieldset class="form__item form__item--information fields">
+            <ul class="fields__list">
+              <li class="fields__item">
+                <label class="fields__label" for="user-name">Имя:*</label>
+                <input class="fields__input" type="text" id="user-name" name="user-name" placeholder="Барсик">
+              </li>
+              <li class="fields__item">
+                <label class="fields__label" for="user-weight">Вес (кг):*</label>
+                <input class="fields__input" type="number" id="user-weight" name="user-weight" placeholder="7">
+              </li>
+              <li class="fields__item">
+                <label class="fields__label" for="user-age">Возраст (лет):</label>
+                <input class="fields__input" type="number" id="user-age" name="user-age" placeholder="7">
+              </li>
+            </ul>
           </fieldset>
 
-          <fieldset class="form__item fields">
-            <input class="fields__input" type="radio" id="weight-loss" name="target-program" value="weight-loss" checked>
-            <label class="fields__label" for="weight-loss">Похудение</label>
-            <input class="fields__input" type="radio" id="weight-gain" name="target-program" value="weight-gain">
-            <label class="fields__label" for="weight-gain">Набор массы</label>
-            <input class="fields__input" type="radio" id="need-advice" name="target-program" value="need-advice">
-            <label class="fields__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
+          <fieldset class="form__item form__item--target fields">
+            <ul class="fields__list">
+              <li class="fields__item fields__item--target">
+                <input class="fields__input" type="radio" id="weight-loss" name="target-program" value="weight-loss" checked>
+                <label class="fields__label" for="weight-loss">Похудение</label>
+              </li>
+              <li class="fields__item fields__item--target">
+                <input class="fields__input" type="radio" id="weight-gain" name="target-program" value="weight-gain">
+                <label class="fields__label" for="weight-gain">Набор массы</label>
+              </li>
+              <li class="fields__item fields__item--target">
+                <input class="fields__input" type="radio" id="need-advice" name="target-program" value="need-advice">
+                <label class="fields__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
           </fieldset>
 
-          <fieldset class="form__item fields">
-            <legend class="fields__legend">Контактные данные (владельца кота)</legend>
-            <label class="fields__label" for="email">E-mail:*</label>
-            <input class="fields__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
-            <label class="fields__label" for="phone">Телефон:*</label>
-            <input class="fields__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+          <fieldset class="form__item form__item--contacts fields">
+            <legend class="fields__legend fields__legend--contacts">Контактные данные (владельца кота)</legend>
+            <ul class="fields__list">
+              <li class="fields__item">
+                <label class="fields__label" for="email">E-mail:*</label>
+                <input class="fields__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
+              </li>
+              <li class="fields__item">
+                <label class="fields__label" for="phone">Телефон:*</label>
+                <input class="fields__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+              </li>
+            </ul>
           </fieldset>
 
-          <fieldset class="form__item fields">
-            <legend class="fields__legend">Комментарий</legend>
+          <fieldset class="form__item form__item--comment fields">
+            <legend class="fields__legend fields__legend--comment">Комментарий</legend>
             <textarea class="fields__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
-          <fieldset class="form__item fields">
-            <legend class="fields__legend">Дополнительно</legend>
-            <input class="fields__input" type="checkbox" id="sweetener" name="sweetener">
-            <label for="sweetener">Сахарозаменитель</label>
-            <input class="fields__input" type="checkbox" id="water" name="water">
-            <label for="water">Питьевая вода</label>
-            <input class="fields__input" type="checkbox" id="milk" name="milk">
-            <label for="milk">Молоко</label>
-            <input class="fields__input" type="checkbox" id="vitamins" name="vitamins">
-            <label for="vitamins">Витамины</label>
+          <fieldset class="form__item form__item--addit fields">
+            <legend class="fields__legend fields__legend--addit">Дополнительно</legend>
+            <ul class="fields__list">
+              <li class="fields__item fields__item--addit">
+                <input class="fields__input" type="checkbox" id="sweetener" name="sweetener">
+                <label class="fields__label" for="sweetener">Сахарозаменитель</label>
+              </li>
+              <li class="fields__item fields__item--addit">
+                <input class="fields__input" type="checkbox" id="water" name="water">
+                <label class="fields__label" for="water">Питьевая вода</label>
+              </li>
+              <li class="fields__item fields__item--addit">
+                <input class="fields__input" type="checkbox" id="milk" name="milk">
+                <label class="fields__label" for="milk">Молоко</label>
+              </li>
+              <li class="fields__item fields__item--addit">
+                <input class="fields__input" type="checkbox" id="vitamins" name="vitamins">
+                <label class="fields__label" for="vitamins">Витамины</label>
+              </li>
+            </ul>
           </fieldset>
 
-          <button class="form__item button" type="submit">Отправить заявку</button>
+          <button class="form__submit button" type="submit">Отправить заявку</button>
           <p class="form__required-fields-text">* — Обязательные поля</p>
         </form>
       </section>
@@ -94,27 +126,42 @@
 
       <section class="main-footer__map map">
         <h2 class="visually-hidden">Карта</h2>
-        <a class="map__link">
-          <img class="map__map" src="http://placehold.it/150x100" alt="Местоположение магазина по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
-        </a>
+        <p class="map__container">
+          <a class="map__link">
+            <img class="map__map" src="less/blocks/map/img/bg-map-mobile@1x.png" width="320" height="400" alt="Местоположение магазина по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+          </a>
+        </p>
       </section>
 
-      <a class="main-footer__logo">
-        <img class="main-footer__logo-image" src="http://placehold.it/150x100" alt="Логотип магазина Cat Energy">
-      </a>
+      <p class="main-footer__logo">
+        <a class="main-footer__link">
+          <img class="main-footer__logo-image" src="http://placehold.it/150x100" width="128" height="24" alt="Логотип магазина Cat Energy">
+        </a>
+      </p>
 
-      <div class="main-footer__social social">
-        <a class="social__item social__item--vk"><span class="visually-hidden">ВКонтакте</span></a>
-        <a class="social__item social__item--inst"><span class="visually-hidden">Instagram</span></a>
-        <a class="social__item social__item--fb"><span class="visually-hidden">Facebook</span></a>
-      </div>
+      <ul class="main-footer__social social">
+        <li>
+          <a class="social__item social__item--vk"><span class="visually-hidden">ВКонтакте</span></a>
+        </li>
+
+        <li>
+          <a class="social__item social__item--inst"><span class="visually-hidden">Instagram</span></a>
+        </li>
+
+        <li>
+          <a class="social__item social__item--fb"><span class="visually-hidden">Facebook</span></a>
+        </li>
+      </ul>
 
       <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__image" src="http://placehold.it/150x100" alt="Лого HTML Academy">
+          HTML Academy
+        </a>
+        <a class="copyright__image-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__image" src="less/blocks/copyright/img/htmlacademy.svg" width="27" height="34" alt="Лого HTML Academy">
         </a>
       </div>
     </footer>
   </body>
 </html>
+

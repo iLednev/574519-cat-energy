@@ -11,21 +11,21 @@
       <a class="main-header__logo" href="#">
         <img class="main-header__logo-image" src="http://placehold.it/150x100" alt="Логотип магазина">
       </a>
+      <button class="main-nav__button button-burger" type="button">Меню</button>
 
       <nav class="main-header__nav main-nav">
-        <button class="main-nav__button button-burger" type="button">Меню</button>
         <ul class="main-nav__menu menu">
-          <li class="main-nav__item"><a href="index.html">Главная</a></li>
-          <li class="main-nav__item"><a href="#">Каталог продукции</a></li>
-          <li class="main-nav__item"><a href="form.html">Подбор программы</a></li>
+          <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Каталог продукции</a></li>
+          <li class="menu__item"><a class="menu__link" href="form.html">Подбор программы</a></li>
         </ul>
       </nav>
     </header>
 
     <h1 class="body__main-heading">Каталог продукции</h1>
 
-    <main class="main">
-      <section class="main__item products">
+    <main>
+      <section class="body__products products">
         <h2 class="visually-hidden">Товары</h2>
 
         <ul class="products__list">
@@ -214,14 +214,14 @@
 
 
         <div class="products__item more-products">
-          <button class="more-products__show-more" type="button"><span class="visually-hidden">Показать больше</span></button>
+          <a class="more-products__show-more"><span class="visually-hidden">Показать больше</span></a>
           <p class="more-products__lead">Показать ещё 100500 товаров</p>
           <p class="more-products__description">На самом деле вкусов гораздо больше!</p>
           <a class="more-products__link button button--show-all" href="#">Показать все</a>
         </div>
       </section>
 
-      <section class="main__item addit-products">
+      <section class="body__addit-products addit-products">
         <h2 class="addit-products__heading">Дополнительные товары</h2>
 
         <ul class="addit-products__list">
@@ -286,7 +286,7 @@
           </li>
         </ul>
 
-        <div class="addit-products__item gift">
+        <div class="addit-products__gift gift">
           <h3 class="visually-hidden">Подарок</h3>
           <p class="gift__condition">
             Закажите все и получите чехол для кота в подарок!
@@ -310,25 +310,39 @@
 
       <section class="main-footer__map map">
         <h2 class="visually-hidden">Карта</h2>
-        <a class="map__link">
-          <img class="map__map" src="http://placehold.it/150x100" alt="Местоположение магазина по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
-        </a>
+        <p class="map__container">
+          <a class="map__link">
+            <img class="map__map" src="less/blocks/map/img/bg-map-mobile@1x.png" width="320" height="400" alt="Местоположение магазина по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+          </a>
+        </p>
       </section>
 
-      <a class="main-footer__logo">
-        <img class="main-footer__logo-image" src="http://placehold.it/150x100" alt="Логотип магазина Cat Energy">
-      </a>
+      <p class="main-footer__logo">
+        <a class="main-footer__link">
+          <img class="main-footer__logo-image" src="http://placehold.it/150x100" width="128" height="24" alt="Логотип магазина Cat Energy">
+        </a>
+      </p>
 
-      <div class="main-footer__social social">
-        <a class="social__item social__item--vk"><span class="visually-hidden">ВКонтакте</span></a>
-        <a class="social__item social__item--inst"><span class="visually-hidden">Instagram</span></a>
-        <a class="social__item social__item--fb"><span class="visually-hidden">Facebook</span></a>
-      </div>
+      <ul class="main-footer__social social">
+        <li>
+          <a class="social__item social__item--vk"><span class="visually-hidden">ВКонтакте</span></a>
+        </li>
+
+        <li>
+          <a class="social__item social__item--inst"><span class="visually-hidden">Instagram</span></a>
+        </li>
+
+        <li>
+          <a class="social__item social__item--fb"><span class="visually-hidden">Facebook</span></a>
+        </li>
+      </ul>
 
       <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__image" src="http://placehold.it/150x100" alt="Лого HTML Academy">
+          HTML Academy
+        </a>
+        <a class="copyright__image-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__image" src="less/blocks/copyright/img/htmlacademy.svg" width="27" height="34" alt="Лого HTML Academy">
         </a>
       </div>
     </footer>
