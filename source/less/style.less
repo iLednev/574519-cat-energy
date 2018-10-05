@@ -1,66 +1,7 @@
-@font-face {
-  font-family: "Oswald";
-  src:
-    local("Oswald-Medium"),
-    url("../fonts/oswaldmedium.woff2"),
-    url("../fonts/oswaldmedium.woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Oswald";
-  src:
-    local("Oswald-Regular"),
-    url("../fonts/oswaldregular.woff2"),
-    url("../fonts/oswaldregular.woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-@path: "../less/blocks/";
-
-@green: #68b738;
-@grey: #f2f2f2;
-
-.standard-arial() {
-  font-family: "Arial", "Helvetica", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
-  font-style: normal;
-  font-weight: normal;
-}
-
-.base-paddings() {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.font-settings(@fontsize: 20px, @lineheight: 20px, @fontweight: 400) {
-  font-size: @fontsize;
-  line-height: @lineheight;
-  font-weight: @fontweight;
-}
-
-.list-reset() {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+/*  Шрифты, хелперы, переменные и миксины  */
+@import "fonts.less";
+@import "helpers.less";
+@import "variables-n-mixins.less";
 
 /*  Общие блоки  */
 
