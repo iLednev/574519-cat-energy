@@ -1,0 +1,33 @@
+/*  Как задать фоновый цвет? В критериях сказано, что элемент с картинкой должен
+содержать фоновый цвет, похожий на основной цвет картинки. Здесь же картинка-фон
+занимает нечётную часть блока, и если задать фоновый цвет, он расползается на
+весь блок. Сделать пустой див и абсолютно его спозиционировать кажется слишком
+мудрёным решением.
+Но если так, то нужно будет задать body__promo position: relative  */
+.promo {
+  .base-paddings();
+  padding-top: 30px;
+  outline: 2px solid black;
+  background-size: 320px 305px;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.promo__heading {
+  margin: 0;
+  margin-bottom: 18px;
+  .font-settings(36px, 36px, 400);
+}
+
+.promo__lead {
+  margin: 0;
+  margin-bottom: 28px;
+  .font-settings(14px, 14px, 400);
+}
+
+.promo__image-wrapper {
+  margin: 0;
+  width: 280px;
+  height: 270px;
+}
