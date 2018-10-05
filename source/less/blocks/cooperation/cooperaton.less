@@ -1,7 +1,17 @@
 .cooperation {
-  .base-paddings();
-  padding-top: 30px;
   background-color: #ffffff;
+}
+
+.cooperation__content {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  .base-paddings();
+
+  width: 280px;
+  padding-top: 30px;
+
+  outline: 2px solid green;
 }
 
 .cooperation--catalog-view {
@@ -9,12 +19,15 @@
 }
 
 .cooperation__lead {
-  margin-right: 18px;
+  margin: 0;
+
+  width: 125px;
   .font-settings(16px, 20px, 400);
   text-transform: uppercase;
 }
 
 .cooperation__address {
+  width: 140px;
   color: #444444;
   font-family: "Arial", "Helvetica", sans-serif;
   .font-settings(14px, 20px, normal);

@@ -1,5 +1,9 @@
-.how-works {
+.how-works__content {
+  display: flex;
+  flex-direction: column;
   .base-paddings();
+
+  width: 280px;
   outline: 2px solid red;
 }
 
@@ -10,11 +14,15 @@
 }
 
 .how-works__list {
+  display: flex;
+  flex-direction: column;
   .list-reset();
   .standard-arial();
 }
 
 .how-works__item {
+  display: flex;
+  justify-content: flex-start;
   margin-bottom: 20px;
 }
 
@@ -54,4 +62,5 @@
 
 .how-works__description {
   margin: 0;
+  width: 200px;
 }

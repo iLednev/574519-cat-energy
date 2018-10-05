@@ -1,5 +1,4 @@
 .main-footer {
-  outline: 2px solid red;
   background-color: @grey;
 }
 
@@ -7,16 +6,27 @@
   padding-bottom: 20px;
 }
 
+.main-footer__content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  width: 320px;
+  outline: 2px solid red;
+}
+
 .main-footer__map {
   margin-bottom: 36px;
 }
 
 .main-footer__logo {
-  margin: 0;
+  .base-paddings();
+  margin: 0 auto;
   margin-bottom: 56px;
 }
 
 .main-footer__social {
+  margin: 0 auto;
   margin-bottom: 44px;
 }
 

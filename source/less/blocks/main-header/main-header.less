@@ -1,17 +1,36 @@
 .main-header {
-  .base-paddings();
   padding-top: 11px;
+}
 
+.main-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  .base-paddings();
+  margin: 0 auto;
+  width: 280px;
   outline: 2px solid red;
 }
 
 .main-header__logo {
-  width: 191px;
+  margin: 0;
+  width: 236px;
   height: 39px;
-  margin-right: 65px;
 }
 
 .main-header__button {
-  width: 25px;
-  height: 19px;
+  width: 24px;
+  height: 18px;
+  border: none;
+  background: none;
+  background-image: url("@{path}main-header/img/icon-mobile-menu.svg");
+}
+
+.main-header__nav {
+  display: none;
+}
+
+.main-header__wrapper {
+  margin: 0 auto;
 }
