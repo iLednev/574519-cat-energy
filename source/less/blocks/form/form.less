@@ -1,18 +1,22 @@
-.form {
-  outline: 2px solid blue;
+.form__form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
   .base-paddings();
+  width: 280px;
+  outline: 2px solid blue;
 }
 
 .form__description {
   margin: 0;
   margin-bottom: 38px;
+  width: 230px;
   .font-settings(14px, 18px, 400);
   text-transform: uppercase;
 }
 
 .form__item {
   margin: 0;
-  padding: 0;
 }
 
 .form__item--information {

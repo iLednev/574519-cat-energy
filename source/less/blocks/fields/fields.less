@@ -1,9 +1,24 @@
+.fields {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: none;
+}
+
+.fields--target {
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
 .fields__list {
   .list-reset();
 }
 
 .fields__item {
   margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   &:last-child {
     margin-bottom: 0;
@@ -12,10 +27,12 @@
 
 .fields__item--target {
   margin-bottom: 26px;
+  justify-content: flex-start;
 }
 
 .fields__item--addit {
   margin-bottom: 28px;
+  justify-content: flex-start;
 }
 
 .fields__legend {
@@ -34,7 +51,46 @@
   margin-bottom: 39px;
 }
 
+.fields__comment {
+  box-sizing: border-box;
+  padding: 15px;
+  min-width: 280px;
+  min-height: 150px;
+}
+
 .fields__label {
   .font-settings(16px, 18px, 400);
   text-transform: uppercase;
+}
+
+.fields__input-text {
+  box-sizing: border-box;
+  padding: 16px 12px;
+  border: 1px solid black;
+  height: 41px;
+}
+
+.fields__input-text--name {
+  width: 229px;
+}
+
+.fields__input-text--weight {
+  width: 204px;
+}
+
+.fields__input-text--age {
+  width: 172px;
+}
+
+.fields__input-text--email {
+  width: 219px;
+}
+
+.fields__input-text--phone {
+  width: 204px;
+}
+
+.fields__input--check {
+  margin: 0;
+  margin-right: 16px;
 }
