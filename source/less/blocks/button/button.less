@@ -1,7 +1,7 @@
 .button {
   box-sizing: border-box;
   display: block;
-  padding-top: 14px;
+  padding: 12px 73px;
   width: 280px;
   height: 40px;
 
@@ -23,4 +23,19 @@
 .button--show-all {
   background-color: @grey;
   color: #444444;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 11px 27px;
+    width: 245px;
+    height: 52px;
+    .font-settings(20px, 20px, 400);
+  }
+
+  .button--addit-view {
+    width: 632px;
+    height: 40px;
+    .font-settings(16px, 20px, 400);
+  }
 }

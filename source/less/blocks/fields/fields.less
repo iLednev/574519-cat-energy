@@ -17,8 +17,8 @@
 .fields__item {
   margin-bottom: 14px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 
   &:last-child {
     margin-bottom: 0;
@@ -56,41 +56,65 @@
   padding: 15px;
   min-width: 280px;
   min-height: 150px;
+  border: 1px solid #e6e6e6;
 }
 
 .fields__label {
+  flex-shrink: 0;
+  margin-right: 16px;
   .font-settings(16px, 18px, 400);
   text-transform: uppercase;
 }
 
 .fields__input-text {
+  flex-grow: 1;
+  width: 40px;
   box-sizing: border-box;
   padding: 16px 12px;
-  border: 1px solid black;
+  border: 1px solid #e6e6e6;
   height: 41px;
-}
-
-.fields__input-text--name {
-  width: 229px;
-}
-
-.fields__input-text--weight {
-  width: 204px;
-}
-
-.fields__input-text--age {
-  width: 172px;
-}
-
-.fields__input-text--email {
-  width: 219px;
-}
-
-.fields__input-text--phone {
-  width: 204px;
 }
 
 .fields__input--check {
   margin: 0;
   margin-right: 16px;
+}
+
+@media (min-width: 768px) {
+  .fields__list--addit {
+    display: flex;
+    justify-content: flex-start;
+    align-items: space-between;
+    flex-wrap: wrap;
+    width: 628px;
+  }
+
+  .fields--target {
+    padding-left: 28px;
+    border: 1px solid #e6e6e6;
+  }
+
+  .fields__legend {
+    .font-settings(36px, 36px, 400);
+  }
+
+  .fields__item--addit {
+    margin: 0;
+    margin-bottom: 54px;
+    padding-left: 30px;
+    width: 254px;
+
+    &:last-child {
+      margin-bottom: 54px;
+    }
+  }
+
+  .fields__label {
+    .font-settings(20px, 20px, 400);
+  }
+
+  .fields__comment {
+    min-width: 631px;
+    min-height: 174px;
+  }
 }

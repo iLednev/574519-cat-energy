@@ -14,3 +14,25 @@
 .products__item {
   margin-bottom: 25px;
 }
+
+@media (min-width: 768px) {
+  .products__content {
+    .base-paddings-tablet();
+    width: 708px;
+  }
+
+  .products__list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .products__item {
+    margin-bottom: 58px;
+  }
+
+  .products__product {
+    position: relative;
+  }
+}

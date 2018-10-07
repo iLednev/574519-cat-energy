@@ -15,7 +15,7 @@
 
 .main-header__logo {
   margin: 0;
-  width: 236px;
+  width: 191px;
   height: 39px;
 }
 
@@ -24,13 +24,39 @@
   height: 18px;
   border: none;
   background: none;
-  background-image: url("@{path}main-header/img/icon-mobile-menu.svg");
+  background-image: url("../img/icon-mobile-menu.svg");
 }
 
 .main-header__nav {
   // display: none;
+  margin: 0 auto;
 }
 
 .main-header__wrapper {
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .main-header__container {
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 20px;
+    .base-paddings-tablet();
+    padding-top: 20px;
+    width: 708px;
+  }
+
+  .main-header__logo {
+    padding-bottom: 6px;
+    width: 174px;
+    height: 59px;
+  }
+
+  .main-header__nav {
+    margin: 0;
+  }
+
+  .main-header__button {
+    display: none;
+  }
 }

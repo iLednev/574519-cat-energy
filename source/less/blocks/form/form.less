@@ -48,5 +48,35 @@
   margin: 0;
   font-family: "Arial", "Helvetica", sans-serif;
   .font-settings(14px, 16px, normal);
+  text-align: center;
   color: #444444;
+}
+
+@media (min-width: 768px) {
+  .form__form {
+    padding-left: 70px;
+    padding-right: 70px;
+    width: 628px;
+  }
+
+  .form__description {
+    width: 324px;
+    .font-settings(20px, 30px, 400);
+  }
+
+  .form__end {
+    display: flex;
+    align-items: center;
+  }
+
+  .form__submit {
+    margin: 0;
+    margin-right: 60px;
+  }
+
+  .form__required-fields-text {
+    width: 190px;
+    .font-settings(16px, 16px, normal);
+  }
+
 }

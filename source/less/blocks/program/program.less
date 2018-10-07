@@ -54,7 +54,6 @@
 .program__description {
   margin: 0;
   .standard-arial();
-  margin: 0;
   margin-bottom: 44px;
 }
 
@@ -74,5 +73,51 @@
   left: 95px;
   width: 24px;
   height: 11px;
-  background-image: url("@{path}program/img/icon-right-arrow-long.svg");
+  background-image: url("../img/icon-right-arrow-long.svg");
+}
+
+/*  ПЛАНШЕТНАЯ ВЕРСИЯ  */
+
+@media (min-width: 768px) {
+  .program__heading {
+    padding: 0;
+    .font-settings(36px, 37px, 400);
+  }
+
+  .program__heading::before {
+    top: 20px;
+    left: 400px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .program__heading--slim::after {
+    top: 5px;
+    left: 425px;
+    width: 141px;
+    height: 194px;
+  }
+
+  .program__heading--pro::after {
+    top: 70px;
+    left: 365px;
+    width: 268px;
+    height: 113px;
+  }
+
+  .program__description {
+    .font-settings(16px, 24px, normal)
+  }
+
+  .program__description--slim {
+    width: 380px;
+  }
+
+  .program__description--pro {
+    width: 340px;
+  }
+
+  .program__link {
+    .font-settings(16px, 16px, 400);
+  }
 }
