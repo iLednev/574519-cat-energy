@@ -2,10 +2,6 @@
   background-color: @grey;
 }
 
-.main-footer__cooperation {
-  padding-bottom: 20px;
-}
-
 .main-footer__content {
   display: flex;
   flex-direction: column;
@@ -52,5 +48,22 @@
 
   .main-footer__social {
     margin: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-footer__content {
+    position: relative;
+    width: 1440px;
+  }
+
+  .main-footer__cooperation {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+  }
+
+  .main-footer__logo-n-social {
+    .base-paddings-desktop();
   }
 }

@@ -13,6 +13,7 @@
         <p class="main-header__logo">
           <a class="main-header__logo-link" href="#">
             <picture>
+              <source srcset="img/logo-desktop.svg" media="(min-width: 1440px)">
               <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
               <img class="main-header__logo-image" src="img/logo-mobile.svg" alt="Логотип магазина">
             </picture>
@@ -84,12 +85,12 @@
 
           <fieldset class="form__item form__item--contacts fields fields--contacts">
             <legend class="fields__legend fields__legend--contacts">Контактные данные (владельца кота)</legend>
-            <ul class="fields__list">
-              <li class="fields__item">
+            <ul class="fields__list fields__list--contacts">
+              <li class="fields__item fields__item--contacts">
                 <label class="fields__label fields__label--text" for="email">E-mail:*</label>
                 <input class="fields__input-text fields__input-text" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
               </li>
-              <li class="fields__item">
+              <li class="fields__item fields__item--contacts">
                 <label class="fields__label fields__label--text" for="phone">Телефон:*</label>
                 <input class="fields__input-text fields__input-text" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
               </li>
@@ -124,7 +125,7 @@
           </fieldset>
 
           <div class="form__end">
-            <button class="form__submit button" type="submit">Отправить заявку</button>
+            <button class="form__submit button button--submit" type="submit">Отправить заявку</button>
             <p class="form__required-fields-text">* — Обязательные поля</p>
           </div>
         </form>
@@ -132,69 +133,68 @@
     </main>
 
     <footer class="body__footer main-footer">
-        <section class="main-footer__cooperation cooperation cooperation--alternate-view">
-          <div class="cooperation__content">
-            <h2 class="visually-hidden">Сотрудничество</h2>
-            <p class="cooperation__lead">
-              Приглашаем к сотрудничеству дилеров!
-            </p>
-            <address class="cooperation__address">
-              ул. Большая Конюшенная, д. 19/8
-              Санкт-Петербург
-            </address>
-          </div>
+      <div class="main-footer__content">
+        <section class="main-footer__cooperation cooperation">
+          <h2 class="visually-hidden">Сотрудничество</h2>
+          <p class="cooperation__lead">
+            Приглашаем к сотрудничеству дилеров!
+          </p>
+          <address class="cooperation__address">
+            ул. Большая Конюшенная, д. 19/8
+            Санкт-Петербург
+          </address>
         </section>
 
-        <div class="main-footer__content">
-          <section class="main-footer__map map">
-            <h2 class="visually-hidden">Карта</h2>
-            <p class="map__container">
-              <a class="map__link">
-                <picture>
-                  <source srcset="img/bg-map-tablet@1x.png" media="(min-width: 768px)">
-                  <img class="map__map" src="img/bg-map-mobile@1x.png" alt="Местоположение магазина по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
-                </picture>
+        <section class="main-footer__map map">
+          <h2 class="visually-hidden">Карта</h2>
+          <p class="map__container">
+            <a class="map__link">
+              <picture>
+                <source srcset="img/bg-map-desktop@1x.png" media="(min-width: 1440px)">
+                <source srcset="img/bg-map-tablet@1x.png" media="(min-width: 768px)">
+                <img class="map__map" src="img/bg-map-mobile@1x.png" alt="Местоположение магазина по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+              </picture>
+            </a>
+          </p>
+        </section>
+
+        <div class="main-footer__logo-n-social">
+          <p class="main-footer__logo">
+            <a class="main-footer__link">
+              <img class="main-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип магазина Cat Energy">
+            </a>
+          </p>
+
+          <ul class="main-footer__social social">
+            <li>
+              <a class="social__item social__item--vk" href="#">
+                <span class="visually-hidden">ВКонтакте</span>
               </a>
-            </p>
-          </section>
+            </li>
 
-          <div class="main-footer__logo-n-social">
-            <p class="main-footer__logo">
-              <a class="main-footer__link">
-                <img class="main-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип магазина Cat Energy">
+            <li>
+              <a class="social__item social__item--inst" href="#">
+                <span class="visually-hidden">Instagram</span>
               </a>
-            </p>
+            </li>
 
-            <ul class="main-footer__social social">
-              <li>
-                <a class="social__item social__item--vk" href="#">
-                  <span class="visually-hidden">ВКонтакте</span>
-                </a>
-              </li>
-
-              <li>
-                <a class="social__item social__item--inst" href="#">
-                  <span class="visually-hidden">Instagram</span>
-                </a>
-              </li>
-
-              <li>
-                <a class="social__item social__item--fb" href="#">
-                  <span class="visually-hidden">Facebook</span>
-                </a>
-              </li>
-            </ul>
-
-            <div class="main-footer__copyright copyright">
-              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-                HTML Academy
+            <li>
+              <a class="social__item social__item--fb" href="#">
+                <span class="visually-hidden">Facebook</span>
               </a>
-              <a class="copyright__image-link" href="https://htmlacademy.ru/intensive/adaptive">
-                <img class="copyright__image" src="img/htmlacademy.svg" width="37" height="44" alt="Лого HTML Academy">
-              </a>
-            </div>
+            </li>
+          </ul>
+
+          <div class="main-footer__copyright copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              HTML Academy
+            </a>
+            <a class="copyright__image-link" href="https://htmlacademy.ru/intensive/adaptive">
+              <img class="copyright__image" src="img/htmlacademy.svg" width="37" height="44" alt="Лого HTML Academy">
+            </a>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
   </body>
 </html>

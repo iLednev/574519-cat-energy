@@ -63,3 +63,22 @@
     margin: 0;
   }
 }
+
+@media (min-width: 1440px) {
+  .body--main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 720px;
+    height: 696px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  .body__main-heading {
+    .base-paddings-desktop();
+    width: 1220px;
+  }
+}

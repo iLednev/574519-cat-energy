@@ -24,6 +24,7 @@
   .products__list {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -34,5 +35,20 @@
 
   .products__product {
     position: relative;
+  }
+}
+
+@media (min-width: 1440px) {
+  .products__content {
+    .base-paddings-desktop();
+    width: 1220px;
+  }
+
+  .products__list {
+    justify-content: flex-start;
+  }
+
+  .products__item:not(:nth-child(4n)):not(:last-child) {
+    margin-right: 80px;
   }
 }

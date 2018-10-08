@@ -1,16 +1,14 @@
 .cooperation {
-  background-color: #ffffff;
-}
-
-.cooperation__content {
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 20px;
   .base-paddings();
 
   width: 280px;
-  padding-top: 30px;
+  background-color: #ffffff;
 
   outline: 2px solid green;
 }
@@ -37,11 +35,27 @@
 }
 
 @media (min-width: 768px) {
-  .cooperation__content {
+  .cooperation {
     padding: 0;
     padding-left: 70px;
     padding-right: 70px;
 
     width: 628px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cooperation {
+    margin: 0;
+    padding: 0;
+    padding-left: 76px;
+    padding-right: 76px;
+
+    width: 476px;
+    min-height: 201px;
+  }
+
+  .cooperation--alternate-view {
+    background-color: #ffffff;
   }
 }

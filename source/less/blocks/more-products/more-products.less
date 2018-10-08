@@ -30,8 +30,8 @@
 
 @media (min-width: 768px) {
   .more-products {
-    margin-top: 93px;
-    padding-top: 55px;
+    margin-top: 104px;
+    padding-top: 54px;
     padding-bottom: 40px;
     padding-left: 38px;
     padding-right: 38px;
@@ -40,6 +40,7 @@
   }
 
   .more-products__show-more {
+    margin-bottom: 50px;
     width: 60px;
     height: 60px;
     background-image: url("../img/icon-plus.svg");
@@ -55,7 +56,17 @@
 
   .more-products__description {
     margin-bottom: 86px;
-    .font-settings(16px, 20px, normal);
+    .font-settings(16px, 16px, normal);
     text-align: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .more-products {
+    width: 167px;
+  }
+
+  .more-products__show-more {
+    margin-bottom: 50px;
   }
 }

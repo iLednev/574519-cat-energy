@@ -27,15 +27,54 @@
 
 @media (min-width: 768px) {
   .button {
-    padding: 11px 27px;
+    padding-top: 16px;
+    padding-bottom: 10px;
+    padding-left: 27px;
+    padding-right: 27px;
     width: 245px;
     height: 52px;
+    .font-settings(16px, 20px, 400);
+  }
+
+  .button--catalog {
+    padding-top: 11px;
+    width: 249px;
+    height: 40px;
+    .font-settings(20px, 20px, 400);
+  }
+
+  .button--program {
     .font-settings(20px, 20px, 400);
   }
 
   .button--addit-view {
     width: 632px;
+  }
+
+  .button--submit {
+    width: 282px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .button {
+    padding-top: 16px;
+    width: 245px;
+    height: 52px;
+  }
+
+  .button--catalog {
+    padding-top: 11px;
+    width: 169px;
     height: 40px;
-    .font-settings(16px, 20px, 400);
+  }
+
+  .button--addit-view {
+    width: 245px;
+  }
+
+  .button--submit {
+    width: 570px;
+    height: 54px;
   }
 }

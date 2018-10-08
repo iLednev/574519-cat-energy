@@ -22,7 +22,7 @@
 
 .how-works__item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
 }
 
@@ -89,6 +89,7 @@
   }
 
   .how-works__item {
+    flex-direction: column;
     margin-bottom: 100px;
     padding-top: 40px;
     width: 324px;
@@ -123,5 +124,27 @@
 
   .how-works__description {
     width: 245px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .how-works__content {
+    .base-paddings-desktop();
+
+    width: 1220px;
+  }
+
+  .how-works__heading {
+    margin-bottom: 63px;
+  }
+
+  .how-works__item {
+    margin-bottom: 0;
+    padding-top: 0;
+    width: 245px;
+  }
+
+  .how-works__item:not(:last-child) {
+    margin-right: 80px;
   }
 }

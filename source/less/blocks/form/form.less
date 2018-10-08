@@ -78,5 +78,22 @@
     width: 190px;
     .font-settings(16px, 16px, normal);
   }
+}
 
+@media (min-width: 1440px) {
+  .form__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .base-paddings-desktop();
+    width: 1220px;
+  }
+
+  .form__description {
+    margin-right: 400px;
+  }
+
+  .form__submit {
+    margin-right: 80px;
+  }
 }

@@ -34,6 +34,20 @@
   }
 
   .addit-products__heading {
+    width: 550px;
     .font-settings(36px, 36px, 400);
+  }
+}
+
+@media (min-width: 1440px) {
+  .addit-products__content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    .base-paddings-desktop();
+    width: 1220px;
+  }
+
+  .addit-products__list {
+    margin-right: 80px;
   }
 }
