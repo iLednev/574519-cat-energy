@@ -8,16 +8,24 @@
   color: #111111;
 }
 
+.body__header {
+  margin: 0 auto;
+  margin-top: 13px;
+  margin-bottom: 14px;
+}
+
 .body__main-heading {
-  margin: 0;
-  padding-top: 24px;
+  margin: 0 auto;
   margin-bottom: 35px;
+  padding-top: 24px;
   .base-paddings();
+
+  width: 280px;
   .font-settings(36px, 60px, 400);
 }
 
-.body__header {
-  margin: 0;
+.body__item {
+  margin: 0 auto;
 }
 
 .body__promo {
@@ -46,4 +54,40 @@
 
 .body__form {
   margin-bottom: 34px;
+}
+
+@media (min-width: 768px) {
+  .body__main-heading {
+    margin-bottom: 74px;
+    .base-paddings-tablet();
+    width: 708px;
+    .font-settings(60px, 60px, 400);
+  }
+
+  .body__promo {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .body--main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 720px;
+    height: 696px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  .body__main-heading {
+    .base-paddings-desktop();
+    width: 1220px;
+  }
+
+  .body__example {
+    margin-bottom: 0;
+  }
 }

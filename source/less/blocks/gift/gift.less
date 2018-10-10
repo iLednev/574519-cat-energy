@@ -1,7 +1,10 @@
 .gift {
-  .base-paddings();
   box-sizing: border-box;
-  padding-top: 39px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .base-paddings();
+  padding-top: 65px;
   width: 280px;
   height: 289px;
   background-color: @green;
@@ -10,14 +13,64 @@
 }
 
 .gift__condition {
+  margin: 0;
+  width: 156px;
+  text-align: center;
   color: #ffffff;
   font-family: "Arial", "Helvetica", sans-serif;
   .font-settings(16px, 20px, normal);
 }
 
 .gift__link {
-  margin: 0 auto;
+  order: -1;
+  margin-bottom: 64px;
   width: 56px;
   height: 61px;
   background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .gift {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-left: 91px;
+    padding-right: 105px;
+    width: 708px;
+    height: 200px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .gift__condition {
+    text-align: left;
+  }
+
+  .gift__link {
+    margin: 0;
+    width: 55px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gift {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    padding-top: 65px;
+    width: 245px;
+    height: 289px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+
+  .gift__link {
+    margin-bottom: 64px;
+    width: 56px;
+    height: 61px;
+  }
+
+  .gift__condition {
+    text-align: center;
+  }
 }

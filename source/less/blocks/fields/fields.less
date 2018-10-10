@@ -1,9 +1,25 @@
+.fields {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+.fields--target {
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
 .fields__list {
   .list-reset();
 }
 
 .fields__item {
   margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &:last-child {
     margin-bottom: 0;
@@ -12,10 +28,12 @@
 
 .fields__item--target {
   margin-bottom: 26px;
+  justify-content: flex-start;
 }
 
 .fields__item--addit {
   margin-bottom: 28px;
+  justify-content: flex-start;
 }
 
 .fields__legend {
@@ -34,7 +52,125 @@
   margin-bottom: 39px;
 }
 
+.fields__comment {
+  box-sizing: border-box;
+  padding: 15px;
+  min-width: 280px;
+  min-height: 150px;
+  border: 1px solid #e6e6e6;
+}
+
 .fields__label {
+  flex-shrink: 0;
+  margin-right: 16px;
   .font-settings(16px, 18px, 400);
   text-transform: uppercase;
+}
+
+.fields__input-text {
+  flex-grow: 1;
+  width: 40px;
+  box-sizing: border-box;
+  padding: 16px 12px;
+  border: 1px solid #e6e6e6;
+  height: 41px;
+}
+
+.fields__input--check {
+  margin: 0;
+  margin-right: 16px;
+}
+
+@media (min-width: 768px) {
+  .fields {
+    width: 630px;
+  }
+
+  .fields--target {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-left: 28px;
+    border: 1px solid #e6e6e6;
+  }
+
+  .fields__list--addit {
+    display: flex;
+    justify-content: flex-start;
+    align-items: space-between;
+    flex-wrap: wrap;
+    width: 628px;
+  }
+
+  .fields__legend {
+    .font-settings(36px, 36px, 400);
+  }
+
+  .fields__item--addit {
+    margin: 0;
+    margin-bottom: 54px;
+    padding-left: 30px;
+    width: 284px;
+
+    &:last-child {
+      margin-bottom: 54px;
+    }
+  }
+
+  .fields__label {
+    .font-settings(20px, 20px, 400);
+  }
+
+  .fields__input-text {
+    height: 52px;
+  }
+
+  .fields__comment {
+    min-width: 631px;
+    min-height: 174px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .fields {
+    width: 570px;
+  }
+
+  .fields--contacts {
+    width: 1220px;
+  }
+
+  .fields--addit {
+    display: flex;
+    width: 1220px;
+  }
+
+  .fields__list--contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fields__list--addit {
+    width: 1220px;
+  }
+
+  .fields__item--contacts {
+    margin: 0;
+    width: 570px;
+  }
+
+  .fields__item--addit {
+    width: 215px;
+    margin-right: 80px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+
+  .fields__comment {
+    min-width: 1220px;
+  }
 }

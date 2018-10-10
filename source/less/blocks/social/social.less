@@ -1,4 +1,37 @@
 .social {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
   .base-paddings();
-  .list-reset();
+
+  width: 125px;
+}
+
+.social__item {
+  display: block;
+  width: 22px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.social__item--vk {
+  background-image: url("../img/icon-vk-mobile.svg");
+}
+
+.social__item--inst {
+  background-image: url("../img/icon-insta-mobile.svg");
+  background-repeat: no-repeat;
+}
+
+.social__item--fb {
+  background-image: url("../img/icon-fb-mobile.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .social {
+    padding: 0;
+  }
 }

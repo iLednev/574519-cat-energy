@@ -1,13 +1,12 @@
-/*  Как задать фоновый цвет? В критериях сказано, что элемент с картинкой должен
-содержать фоновый цвет, похожий на основной цвет картинки. Здесь же картинка-фон
-занимает нечётную часть блока, и если задать фоновый цвет, он расползается на
-весь блок. Сделать пустой див и абсолютно его спозиционировать кажется слишком
-мудрёным решением.
-Но если так, то нужно будет задать body__promo position: relative  */
-.promo {
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
   .base-paddings();
   padding-top: 30px;
-  outline: 2px solid black;
+
+  width: 280px;
   background-size: 320px 305px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -17,17 +16,71 @@
 .promo__heading {
   margin: 0;
   margin-bottom: 18px;
+  text-align: center;
   .font-settings(36px, 36px, 400);
 }
 
 .promo__lead {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   .font-settings(14px, 14px, 400);
+  text-transform: uppercase;
 }
 
 .promo__image-wrapper {
   margin: 0;
   width: 280px;
   height: 270px;
+}
+
+@media (min-width: 768px) {
+  .promo__content {
+    align-items: flex-start;
+    width: 618px;
+    min-height: 801px;
+    padding-left: 120px;
+    padding-right: 30px;
+    background: none;
+    color: #000000;
+  }
+
+  .promo__heading {
+    margin-bottom: 30px;
+    width: 415px;
+    .font-settings(60px, 60px, 400);
+    text-align: left;
+  }
+
+  .promo__lead {
+    margin-bottom: 46px;
+    .font-settings(20px, 20px, 400);
+  }
+
+  .promo__image-wrapper {
+    position: absolute;
+    top: 220px;
+    left: 38px;
+    width: 709px;
+    height: 609px;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 1440px) {
+  .promo__content {
+    margin-bottom: 80px;
+    padding-top: 112px;
+    .base-paddings-desktop();
+    width: 1220px;
+    min-height: 468px;
+  }
+
+  .promo__image-wrapper {
+    top: 20px;
+    left: 562px;
+  }
+
+  .promo__lead {
+    margin-bottom: 53px;
+  }
 }

@@ -1,6 +1,9 @@
-.programs {
+.programs__content {
+  display: flex;
+  flex-direction: column;
   .base-paddings();
-  outline: 2px solid green;
+
+  width: 280px;
 }
 
 .programs__list {
@@ -9,4 +12,26 @@
 
 .programs__item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .programs__content {
+    .base-paddings-tablet();
+
+    width: 708px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .programs__content {
+    .base-paddings-desktop();
+
+    width: 1220px;
+  }
+
+  .programs__list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
