@@ -106,7 +106,7 @@
             </li>
             <li class="how-works__item">
               <div class="how-works__icon how-works__icon--clock"></div>
-              <p class="how-works__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+              <p class="how-works__description">Уже через месяц наслаждайтесь изменениями к лучшему <br> вашего питомца!</p>
             </li>
           </ul>
       </section>
@@ -133,42 +133,47 @@
                 </p>
               </div>
 
-              <p class="example__total">Затраты на питание: 15 000 руб.</p>
+              <p class="example__total">Затраты на питание: <span>15 000 руб.</span></p>
             </div>
           </div>
 
           <div class="example__slider">
-            <p class="example__slide example__slide--before">
+            <p class="example__slide">
               <picture>
                 <source srcset="img/before-desktop@1x.png" media="(min-width: 1440px)">
                 <source srcset="img/before-tablet@1x.png" media="(min-width: 768px)">
                 <img class="example__photo" src="img/before-mobile@1x.png" alt="Фотография толстого кота Бориса">
               </picture>
             </p>
-            <p class="example__slide example__slide--after">
-              <img class="example__photo js-hidden" src="img/after-mobile@1x.png" alt="А стал худым">
+            <p class="example__slide example__slide--hidden">
+              <picture>
+                <source srcset="img/after-desktop@1x.png" media="(min-width: 1440px)">
+                <source srcset="img/after-tablet@1x.png" media="(min-width: 768px)">
+                <img class="example__photo" src="img/after-mobile@1x.png" alt="Фотография худого кота Бориса">
+              </picture>
             </p>
             <div class="example__switcher">
-              <label class="example__label example__label--left" for="before">Было</label>
-              <input class="example__switch" type="radio" name="slider-switcher" id="before" checked>
+              <label class="example__label js-first-label" for="before">Было</label>
+              <input class="example__switch visually-hidden js-first-radio" type="radio" name="slider-switcher" id="before" checked>
               <div class="example__switch-line"></div>
-              <input class="example__switch" type="radio" name="slider-switcher" id="after">
-              <label class="example__label example__label--right" for="after">Стало</label>
+              <input class="example__switch visually-hidden js-second-radio" type="radio" name="slider-switcher" id="after">
+              <label class="example__label js-second-label" for="after">Стало</label>
             </div>
           </div>
         </div>
       </section>
+      <script src="js/switcher.js"></script>
 
       <section class="cooperation">
         <div class="cooperation__wrapper">
           <div class="cooperation__dilers">
             <h2 class="visually-hidden">Сотрудничество</h2>
             <p class="cooperation__lead">
-              Приглашаем к сотрудничеству дилеров!
+              Приглашаем <br>к сотрудничеству дилеров!
             </p>
             <address class="cooperation__address">
               ул. Большая Конюшенная, д. 19/8
-              Санкт-Петербург
+              <span>Санкт-Петербург</span>
             </address>
           </div>
         </div>
@@ -198,20 +203,20 @@
           </p>
 
           <ul class="main-footer__social social">
-            <li>
-              <a class="social__item social__item--vk" href="#">
+            <li class="social__item social__item--vk">
+              <a href="#">
                 <span class="visually-hidden">ВКонтакте</span>
               </a>
             </li>
 
-            <li>
-              <a class="social__item social__item--inst" href="#">
+            <li class="social__item social__item--inst">
+              <a href="#">
                 <span class="visually-hidden">Instagram</span>
               </a>
             </li>
 
-            <li>
-              <a class="social__item social__item--fb" href="#">
+            <li class="social__item social__item--fb">
+              <a href="#">
                 <span class="visually-hidden">Facebook</span>
               </a>
             </li>
@@ -222,7 +227,7 @@
               HTML Academy
             </a>
             <a class="copyright__image-link" href="https://htmlacademy.ru/intensive/adaptive">
-              <img class="copyright__image" src="img/htmlacademy.svg" width="37" height="44" alt="Лого HTML Academy">
+              <img class="copyright__image" src="img/htmlacademy.svg" width="39" height="47" alt="Лого HTML Academy">
             </a>
           </div>
         </div>

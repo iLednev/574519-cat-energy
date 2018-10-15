@@ -1,4 +1,5 @@
 .fields {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -6,10 +7,23 @@
   box-sizing: border-box;
 }
 
+.fields--information::before {
+  .line-mobile-long();
+  bottom: -24px;
+  left: -20px;
+}
+
 .fields--target {
   padding-top: 27px;
-  padding-bottom: 27px;
+  padding-bottom: 25px;
+
+  &::before {
+    .line-mobile-long();
+    bottom: 0;
+    left: -20px;
+  }
 }
+
 
 .fields__list {
   .list-reset();
@@ -27,37 +41,127 @@
 }
 
 .fields__item--target {
-  margin-bottom: 26px;
+  margin-bottom: 25px;
   justify-content: flex-start;
 }
 
+.fields__item--target label {
+  position: relative;
+  padding-left: 46px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+  }
+}
+
+.fields__item--target input:focus + label::before {
+  box-shadow: 0 0 0 2px @green;
+}
+
+.fields__item--target input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 12px;
+  height: 12px;
+  background-color: @green;
+  border-radius: 50%;
+}
+
+
 .fields__item--addit {
-  margin-bottom: 28px;
+  position: relative;
+  margin-bottom: 25px;
   justify-content: flex-start;
+}
+
+.fields__item--addit label {
+  padding-left: 46px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+.fields__item--addit input:focus + label::before {
+  outline: 1px solid @green;
+}
+
+.fields__item--addit input:checked + label::before {
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 22px 17px;
 }
 
 .fields__legend {
+  padding: 0;
+  position: relative;
   .font-settings(24px, 24px, 400);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    height: 3px;
+    background-color: @green;
+  }
 }
 
 .fields__legend--contacts {
-  margin-bottom: 31px;
+  margin-bottom: 34px;
+
+  &::before {
+    right: -20px;
+    width: 99px;
+  }
 }
 
 .fields__legend--comment {
-  margin-bottom: 31px;
+  margin-bottom: 35px;
+
+  &::before {
+    right: -180px;
+    width: 158px;
+  }
 }
 
 .fields__legend--addit {
-  margin-bottom: 39px;
+  margin-bottom: 42px;
+
+  &::before {
+    right: -159px;
+    width: 136px;
+  }
 }
 
 .fields__comment {
+  font-family: "Oswald", "Arial", sans-serif;
+  .font-settings(16px, 18px, 400);
+  color: #444444;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 13px;
   min-width: 280px;
   min-height: 150px;
   border: 1px solid #e6e6e6;
+
+  &::placeholder {
+    text-transform: uppercase;
+  }
 }
 
 .fields__label {
@@ -68,12 +172,19 @@
 }
 
 .fields__input-text {
+  font-family: "Oswald", "Arial", sans-serif;
+  .font-settings(16px, 18px, 400);
+  color: #444444;
   flex-grow: 1;
   width: 40px;
   box-sizing: border-box;
-  padding: 16px 12px;
+  padding: 12px 15px;
   border: 1px solid #e6e6e6;
-  height: 41px;
+  height: 45px;
+
+  &::placeholder {
+    text-transform: uppercase;
+  }
 }
 
 .fields__input--check {
@@ -86,14 +197,23 @@
     width: 630px;
   }
 
+  .fields--information::before {
+    display: none;
+  }
+
   .fields--target {
-    padding-top: 36px;
-    padding-bottom: 36px;
+    padding-top: 34px;
+    padding-bottom: 34px;
     padding-left: 28px;
     border: 1px solid #e6e6e6;
+
+    &::before {
+      display: none;
+    }
   }
 
   .fields__list--addit {
+    padding-top: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: space-between;
@@ -103,16 +223,86 @@
 
   .fields__legend {
     .font-settings(36px, 36px, 400);
+
+    &::before {
+      top: 22px;
+      left: -70px;
+      width: 768px;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -39px;
+      width: calc(100% + 78px);
+      height: 100%;
+      background-color: #ffffff;
+      z-index: -1;
+    }
+  }
+
+  .fields__legend--contacts {
+    margin-bottom: 76px;
+  }
+
+  .fields__legend--comment {
+    margin-bottom: 76px;
+  }
+
+  .fields__legend--addit {
+    margin-bottom: 46px;
+  }
+
+  .fields__item {
+    margin-bottom: 20px;
+  }
+
+  .fields__item--target {
+    margin-bottom: 33px;
+  }
+
+  .fields__item--target label {
+    padding-left: 59px;
+
+    &::before {
+      top: -9px;
+      left: 0;
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  .fields__item--target input:checked + label::after {
+    left: 11px;
+    width: 18px;
+    height: 18px;
   }
 
   .fields__item--addit {
     margin: 0;
-    margin-bottom: 54px;
-    padding-left: 30px;
+    margin-bottom: 52px;
+    margin-right: 60px;
     width: 284px;
 
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
     &:last-child {
-      margin-bottom: 54px;
+      margin-bottom: 52px;
+    }
+  }
+
+  .fields__item--addit label {
+    padding-left: 58px;
+
+    &::before {
+      top: -9px;
+      left: 0;
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -121,12 +311,16 @@
   }
 
   .fields__input-text {
+    padding: 12px 22px;
     height: 52px;
+    .font-settings(20px, 30px, 400);
   }
 
   .fields__comment {
+    padding: 10px 18px;
     min-width: 631px;
     min-height: 174px;
+    .font-settings(20px, 30px, 400);
   }
 }
 
@@ -153,6 +347,11 @@
     width: 1220px;
   }
 
+  .fields__legend::before {
+    left: -110px;
+    width: 1440px;
+  }
+
   .fields__item--contacts {
     margin: 0;
     width: 570px;
@@ -160,15 +359,18 @@
 
   .fields__item--addit {
     width: 215px;
-    margin-right: 80px;
+    margin-right: 110px;
     margin-bottom: 0;
+
+    &:nth-child(2n) {
+      margin-right: 110px;
+    }
 
     &:last-child {
       margin-right: 0;
       margin-bottom: 0;
     }
   }
-
 
   .fields__comment {
     min-width: 1220px;

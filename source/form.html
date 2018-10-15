@@ -7,7 +7,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body class="body body__header">
+  <body class="body">
     <header class="body__header main-header">
       <div class="main-header__container">
         <p class="main-header__logo">
@@ -40,7 +40,7 @@
       </div>
     </header>
 
-    <h1 class="body__main-heading">Подбор программы</h1>
+    <h1 class="body__main-heading body__main-heading--form">Подбор программы</h1>
 
     <main>
       <section class="body__form form">
@@ -49,7 +49,7 @@
             Заполните анкету и мы подберем программу питания для вашего кота
           </p>
 
-          <fieldset class="form__item form__item--information fields">
+          <fieldset class="form__item form__item--information fields fields--information">
             <ul class="fields__list fields__list--information">
               <li class="fields__item">
                 <label class="fields__label fields__label--text" for="user-name">Имя:*</label>
@@ -69,15 +69,15 @@
           <fieldset class="form__item form__item--target fields fields--target">
             <ul class="fields__list">
               <li class="fields__item fields__item--target">
-                <input class="fields__input fields__input--check" type="radio" id="weight-loss" name="target-program" value="weight-loss" checked>
+                <input class="fields__input fields__input--check visually-hidden" type="radio" id="weight-loss" name="target-program" value="weight-loss" checked>
                 <label class="fields__label" for="weight-loss">Похудение</label>
               </li>
               <li class="fields__item fields__item--target">
-                <input class="fields__input fields__input--check" type="radio" id="weight-gain" name="target-program" value="weight-gain">
+                <input class="fields__input fields__input--check visually-hidden" type="radio" id="weight-gain" name="target-program" value="weight-gain">
                 <label class="fields__label" for="weight-gain">Набор массы</label>
               </li>
               <li class="fields__item fields__item--target">
-                <input class="fields__input fields__input--check" type="radio" id="need-advice" name="target-program" value="need-advice">
+                <input class="fields__input fields__input--check visually-hidden" type="radio" id="need-advice" name="target-program" value="need-advice">
                 <label class="fields__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
@@ -106,19 +106,19 @@
             <legend class="fields__legend fields__legend--addit">Дополнительно</legend>
             <ul class="fields__list fields__list--addit">
               <li class="fields__item fields__item--addit">
-                <input class="fields__input fields__input--check" type="checkbox" id="sweetener" name="sweetener">
+                <input class="fields__input fields__input--check visually-hidden" type="checkbox" id="sweetener" name="sweetener">
                 <label class="fields__label" for="sweetener">Сахарозаменитель</label>
               </li>
               <li class="fields__item fields__item--addit">
-                <input class="fields__input fields__input--check" type="checkbox" id="water" name="water">
+                <input class="fields__input fields__input--check visually-hidden" type="checkbox" id="water" name="water">
                 <label class="fields__label" for="water">Питьевая вода</label>
               </li>
               <li class="fields__item fields__item--addit">
-                <input class="fields__input fields__input--check" type="checkbox" id="milk" name="milk">
+                <input class="fields__input fields__input--check visually-hidden" type="checkbox" id="milk" name="milk">
                 <label class="fields__label" for="milk">Молоко</label>
               </li>
               <li class="fields__item fields__item--addit">
-                <input class="fields__input fields__input--check" type="checkbox" id="vitamins" name="vitamins">
+                <input class="fields__input fields__input--check visually-hidden" type="checkbox" id="vitamins" name="vitamins">
                 <label class="fields__label" for="vitamins">Витамины</label>
               </li>
             </ul>
@@ -132,15 +132,15 @@
       </section>
 
       <section class="cooperation cooperation--alternate-view">
-        <div class="cooperation__wrapper">
+        <div class="cooperation__wrapper cooperation__wrapper--alternate-view">
           <div class="cooperation__dilers">
             <h2 class="visually-hidden">Сотрудничество</h2>
             <p class="cooperation__lead">
-              Приглашаем к сотрудничеству дилеров!
+              Приглашаем <br> к сотрудничеству дилеров!
             </p>
             <address class="cooperation__address">
               ул. Большая Конюшенная, д. 19/8
-              Санкт-Петербург
+              <span>Санкт-Петербург</span>
             </address>
           </div>
         </div>
