@@ -65,16 +65,27 @@
   text-decoration: none;
   text-transform: uppercase;
   color: #111111;
-}
 
-.program__link::after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 95px;
-  width: 24px;
-  height: 11px;
-  background-image: url("../img/icon-right-arrow-long.svg");
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 95px;
+    width: 24px;
+    height: 11px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after {
+    transition-duration: 80ms;
+    width: 33px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 /*  ПЛАНШЕТНАЯ ВЕРСИЯ  */
