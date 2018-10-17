@@ -1,40 +1,91 @@
 .addit-products__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   .base-paddings();
-  padding-top: 30px;
+  padding-top: 29px;
   width: 280px;
+
+  &::before {
+    .line-mobile-long();
+    top: 0;
+    left: 0;
+  }
 }
 
 .addit-products__heading {
+  position: relative;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   .font-settings(24px, 24px, 400);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 53px;
+    height: 3px;
+    background-color: @green;
+    top: 14px;
+    right: -20px;
+  }
 }
 
 .addit-products__list {
+  position: relative;
   display: flex;
   flex-direction: column;
   .list-reset();
+  margin-bottom: 41px;
+
+  &::before {
+    .line-mobile();
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .addit-products__item {
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 768px) {
   .addit-products__content {
     .base-paddings-tablet();
+    padding-top: 5px;
     width: 708px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .addit-products__heading {
+    margin-left: 38px;
+    margin-bottom: 80px;
+    width: 550px;
+    .font-settings(36px, 36px, 400);
+
+    &::before {
+      display: none;
+    }
   }
 
   .addit-products__list {
     margin-bottom: 69px;
+
+    &::before {
+      display: none;
+    }
   }
 
-  .addit-products__heading {
-    width: 550px;
-    .font-settings(36px, 36px, 400);
+  .addit-products__item {
+    margin-bottom: 0;
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
   }
 }
 
@@ -42,13 +93,47 @@
   .addit-products__content {
     flex-direction: row;
     flex-wrap: wrap;
-    padding-bottom: 70px;
+    padding-bottom: 0;
     .base-paddings-desktop();
     width: 1220px;
+  }
+
+  .addit-products__heading {
+    width: initial;
+    min-width: 340px;
+    position: relative;
+    margin-left: 0;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 21px;
+      left: -110px;
+      width: 1440px;
+      height: 3px;
+      background-color: @green;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -37px;
+      width: calc(100% + 74px);
+      height: 100%;
+      background-color: #ffffff;
+      z-index: -1;
+    }
   }
 
   .addit-products__list {
     margin: 0;
     margin-right: 80px;
+  }
+
+  .addit-products__item {
+    border-left: none;
+    border-right: none;
   }
 }

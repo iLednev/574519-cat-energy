@@ -11,9 +11,17 @@
   text-transform: uppercase;
   text-align: center;
   background-color: @green;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
   font-family: "Oswald", "Arial", sans-serif;
   .font-settings(16px, 20px, 400);
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--program {
@@ -22,7 +30,15 @@
 
 .button--show-all {
   background-color: @grey;
-  color: #444444;
+  color: rgba(68, 68, 68, 1);
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 @media (min-width: 768px) {
@@ -40,7 +56,7 @@
     padding-top: 11px;
     width: 249px;
     height: 40px;
-    .font-settings(20px, 20px, 400);
+    .font-settings(16px, 20px, 400);
   }
 
   .button--program {
@@ -48,10 +64,14 @@
   }
 
   .button--addit-view {
+    padding-top: 11px;
     width: 632px;
+    height: 40px;
   }
 
   .button--submit {
+    padding-top: 9px;
+    .font-settings(20px, 20px, 400);
     width: 282px;
   }
 }
@@ -70,10 +90,13 @@
   }
 
   .button--addit-view {
+    padding-top: 11px;
     width: 245px;
+    height: 40px;
   }
 
   .button--submit {
+    padding-top: 11px;
     width: 570px;
     height: 54px;
   }
