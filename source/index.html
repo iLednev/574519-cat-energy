@@ -49,9 +49,13 @@
           <p class="promo__lead">Занялся собой? Займись котом!</p>
           <p class="promo__image-wrapper">
             <picture class="promo__image-picture">
-              <source srcset="img/index-can-desktop@1x.png" media="(min-width: 1440px)">
-              <source srcset="img/index-can-tablet@1x.jpg" media="(min-width: 768px)">
-              <img class="promo__image" src="img/index-can-mobile@1x.png" alt="Банка еды с курицей">
+              <source srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x" media="(min-width: 1440px)">
+              <source srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x" media="(min-width: 768px)">
+              <img class="promo__image"
+                src="img/index-can-mobile@1x.png"
+                srcset="img/index-can-mobile@1x.png 1x,
+                img/index-can-mobile@2x.png 2x"
+                 alt="Банка еды с курицей">
             </picture>
           </p>
           <a class="promo__link button button--program" href="form.html">Подобрать программу</a>
@@ -140,16 +144,24 @@
           <div class="example__slider">
             <p class="example__slide">
               <picture>
-                <source srcset="img/before-desktop@1x.png" media="(min-width: 1440px)">
-                <source srcset="img/before-tablet@1x.png" media="(min-width: 768px)">
-                <img class="example__photo" src="img/before-mobile@1x.png" alt="Фотография толстого кота Бориса">
+                <source srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x" media="(min-width: 768px)">
+                <img class="example__photo"
+                src="img/before-mobile@1x.png"
+                srcset="img/before-mobile@1x.png 1x,
+                img/before-mobile@2x.png 2x"
+                alt="Фотография толстого кота Бориса">
               </picture>
             </p>
             <p class="example__slide example__slide--hidden">
               <picture>
-                <source srcset="img/after-desktop@1x.png" media="(min-width: 1440px)">
-                <source srcset="img/after-tablet@1x.png" media="(min-width: 768px)">
-                <img class="example__photo" src="img/after-mobile@1x.png" alt="Фотография худого кота Бориса">
+                <source srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x" media="(min-width: 768px)">
+                <img class="example__photo"
+                src="img/after-mobile@1x.png"
+                srcset="img/after-mobile@1x.png 1x,
+                img/after-mobile@2x.png 2x"
+                alt="Фотография похудевшего кота Бориса">
               </picture>
             </p>
             <div class="example__switcher">
@@ -185,9 +197,12 @@
           <p class="cooperation__map-container">
             <a class="cooperation__map-link">
               <picture>
-                <source srcset="img/bg-map-desktop@1x.png" media="(min-width: 1440px)">
-                <source srcset="img/bg-map-tablet@1x.png" media="(min-width: 768px)">
-                <img src="img/bg-map-mobile@1x.png" alt="Местоположение магазина по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+                <source srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x" media="(min-width: 768px)">
+                <img
+                src="img/bg-map-mobile@1x.png"
+                srcset="img/bg-map-mobile@1x.png 1x, img/bg-map-mobile@2x.png 2x"
+                alt="Местоположение магазина по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
               </picture>
             </a>
           </p>

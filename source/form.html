@@ -150,9 +150,12 @@
           <p class="cooperation__map-container">
             <a class="cooperation__map-link">
               <picture>
-                <source srcset="img/bg-map-desktop@1x.png" media="(min-width: 1440px)">
-                <source srcset="img/bg-map-tablet@1x.png" media="(min-width: 768px)">
-                <img src="img/bg-map-mobile@1x.png" alt="Местоположение магазина по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+                <source srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x" media="(min-width: 768px)">
+                <img
+                src="img/bg-map-mobile@1x.png"
+                srcset="img/bg-map-mobile@1x.png 1x, img/bg-map-mobile@2x.png 2x"
+                alt="Местоположение магазина по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
               </picture>
             </a>
           </p>
