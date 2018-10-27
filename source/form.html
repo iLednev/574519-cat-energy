@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
 
   <body class="body">
@@ -88,7 +88,10 @@
             <ul class="fields__list fields__list--contacts">
               <li class="fields__item fields__item--contacts">
                 <label class="fields__label fields__label--text" for="email">E-mail:*</label>
-                <input class="fields__input-text fields__input-text" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
+                <input class="fields__input-text" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
+                <svg class="fields__icon-mail">
+                  <use xlink:href="img/sprite.svg#spr-icon-mail"></use>
+                </svg>
               </li>
               <li class="fields__item fields__item--contacts">
                 <label class="fields__label fields__label--text" for="phone">Телефон:*</label>
@@ -150,6 +153,9 @@
           <p class="cooperation__map-container">
             <a class="cooperation__map-link">
               <picture>
+                <source type="image/webp" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x" media="(min-width: 1440px)">
+                <source type="image/webp" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x" media="(min-width: 768px)">
+                <source type="image/webp" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x" >
                 <source srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x" media="(min-width: 1440px)">
                 <source srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x" media="(min-width: 768px)">
                 <img
@@ -174,30 +180,39 @@
 
           <ul class="main-footer__social social">
             <li>
-              <a class="social__item social__item--vk" href="#">
+              <a class="social__item" href="#">
                 <span class="visually-hidden">ВКонтакте</span>
+                <svg class="social__vk">
+                  <use xlink:href="img/sprite.svg#spr-icon-vk"></use>
+                </svg>
               </a>
             </li>
 
             <li>
-              <a class="social__item social__item--inst" href="#">
+              <a class="social__item" href="#">
                 <span class="visually-hidden">Instagram</span>
+                <svg class="social__inst">
+                  <use xlink:href="img/sprite.svg#spr-icon-insta"></use>
+                </svg>
               </a>
             </li>
 
             <li>
-              <a class="social__item social__item--fb" href="#">
+              <a class="social__item" href="#">
                 <span class="visually-hidden">Facebook</span>
+                <svg class="social__fb">
+                  <use xlink:href="img/sprite.svg#spr-icon-fb"></use>
+                </svg>
               </a>
             </li>
           </ul>
 
           <div class="main-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              HTML Academy
-            </a>
-            <a class="copyright__image-link" href="https://htmlacademy.ru/intensive/adaptive">
-              <img class="copyright__image" src="img/htmlacademy.svg" width="37" height="44" alt="Лого HTML Academy">
+              <span class="copyright__text">HTML Academy</span>
+              <svg class="copyright__image" width="39" height="47">
+                <use xlink:href="img/sprite.svg#spr-htmlacademy"></use>
+              </svg>
             </a>
           </div>
         </div>

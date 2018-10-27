@@ -10,25 +10,28 @@
 
 .social__item {
   display: block;
+  color: #666666;
 
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  &:hover {
+    color: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.social__item--vk {
-  background-image: url("../img/icon-vk-mobile.svg");
+.social__vk {
   width: 22px;
   height: 12px;
 }
 
-.social__item--inst {
-  background-image: url("../img/icon-insta-mobile.svg");
+.social__inst {
   width: 17px;
   height: 17px;
 }
 
-.social__item--fb {
-  background-image: url("../img/icon-fb-mobile.svg");
+.social__fb {
   width: 10px;
   height: 19px;
 }
@@ -38,17 +41,17 @@
     padding: 0;
   }
 
-  .social__item--vk {
+  .social__vk {
     width: 30px;
     height: 16px;
   }
 
-  .social__item--inst {
+  .social__inst {
     width: 23px;
     height: 23px;
   }
 
-  .social__item--fb {
+  .social__fb {
     width: 14px;
     height: 28px;
   }

@@ -1,17 +1,30 @@
 .copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   .base-paddings();
   padding-bottom: 22px;
 }
 
 .copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 16px;
   line-height: 16px;
   color: #444444;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link:hover .copyright__image {
+  color: @green;
+}
+
+
+.copyright__image {
+  color: #666666;
 }
 
 @media (min-width: 768px) {
@@ -20,7 +33,7 @@
     padding: 0;
   }
 
-  .copyright__link {
+  .copyright__text {
     margin-right: 11px;
   }
 }
