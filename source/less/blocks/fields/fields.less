@@ -30,6 +30,7 @@
 }
 
 .fields__item {
+  position: relative;
   margin-bottom: 14px;
   display: flex;
   justify-content: space-between;
@@ -208,9 +209,21 @@
     border: 1px solid rgba(205, 205, 205, 1);
   }
 
-  &:active {
+  &:focus {
     border: 1px solid #444444;
   }
+}
+
+.fields__icon-mail {
+  width: 18px;
+  height: 14px;
+  position: absolute;
+  right: 20px;
+  color: #222222;
+}
+
+.fields__input-text:focus + .fields__icon-mail {
+  color: @green;
 }
 
 .fields__input--check {
