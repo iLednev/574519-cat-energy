@@ -48,7 +48,7 @@ gulp.task("sprite", function() {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img/all"));
 })
 
 gulp.task("html", function() {
@@ -67,9 +67,9 @@ gulp.task("images", function() {
 });
 
 gulp.task("webp", function() {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src("source/img/all/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("source/img/all"));
 })
 
 gulp.task("refresh", function(done) {
