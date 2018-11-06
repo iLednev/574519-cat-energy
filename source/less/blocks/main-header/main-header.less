@@ -16,18 +16,56 @@
   &:hover {
     opacity: 0.8;
   }
+}
 
+.main-header__logo-image {
+  cursor: pointer;
   &:active {
     opacity: 0.6;
   }
 }
 
 .main-header__button {
+  position: relative;
+  padding: 0;
   width: 24px;
   height: 18px;
   border: none;
   background: none;
-  background-image: url("../img/backgrounds/icon-mobile-menu.svg");
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+    transition-duration: 0.2s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+    transition-duration: 0.2s;
+    box-shadow:
+      0 7px 0 0 black,
+      0 -7px 0 0 black;
+  }
+}
+
+.main-header__button.active {
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    box-shadow: none;
+  }
 }
 
 .main-header__nav {

@@ -13,7 +13,7 @@
     <header class="body__header main-header">
       <div class="main-header__container">
         <p class="main-header__logo">
-          <a class="main-header__logo-link" href="#">
+          <a class="main-header__logo-link" href="index.html">
             <picture>
               <source srcset="img/all/logo-desktop.svg" media="(min-width: 1440px)">
               <source srcset="img/all/logo-tablet.svg" media="(min-width: 768px)">
@@ -53,18 +53,22 @@
 
           <fieldset class="form__item form__item--information fields fields--information">
             <ul class="fields__list fields__list--information">
+
               <li class="fields__item">
-                <label class="fields__label fields__label--text" for="user-name">Имя:*</label>
-                <input class="fields__input-text fields__input-text" type="text" id="user-name" name="user-name" placeholder="Барсик">
+                <label class="fields__label fields__label--text" for="cat-name">Имя:*</label>
+                <input class="fields__input-text fields__input-text js-required" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
               </li>
+
               <li class="fields__item">
-                <label class="fields__label fields__label--text" for="user-weight">Вес (кг):*</label>
-                <input class="fields__input-text fields__input-text" type="number" id="user-weight" name="user-weight" placeholder="7">
+                <label class="fields__label fields__label--text" for="cat-weight">Вес (кг):*</label>
+                <input class="fields__input-text fields__input-text js-required" type="number" id="cat-weight" name="cat-weight" placeholder="7" required>
               </li>
+
               <li class="fields__item">
-                <label class="fields__label fields__label--text" for="user-age">Возраст (лет):</label>
-                <input class="fields__input-text fields__input-text" type="number" id="user-age" name="user-age" placeholder="7">
+                <label class="fields__label fields__label--text" for="cat-age">Возраст (лет):</label>
+                <input class="fields__input-text fields__input-text" type="number" id="cat-age" name="cat-age" placeholder="7">
               </li>
+
             </ul>
           </fieldset>
 
@@ -74,10 +78,12 @@
                 <input class="fields__input fields__input--check visually-hidden" type="radio" id="weight-loss" name="target-program" value="weight-loss" checked>
                 <label class="fields__label" for="weight-loss">Похудение</label>
               </li>
+
               <li class="fields__item fields__item--target">
                 <input class="fields__input fields__input--check visually-hidden" type="radio" id="weight-gain" name="target-program" value="weight-gain">
                 <label class="fields__label" for="weight-gain">Набор массы</label>
               </li>
+
               <li class="fields__item fields__item--target">
                 <input class="fields__input fields__input--check visually-hidden" type="radio" id="need-advice" name="target-program" value="need-advice">
                 <label class="fields__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
@@ -89,15 +95,19 @@
             <legend class="fields__legend fields__legend--contacts">Контактные данные (владельца кота)</legend>
             <ul class="fields__list fields__list--contacts">
               <li class="fields__item fields__item--contacts">
-                <label class="fields__label fields__label--text" for="email">E-mail:*</label>
-                <input class="fields__input-text" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
-                <svg class="fields__icon-mail">
+                <label class="fields__label fields__label--text" for="email" rq>E-mail:*</label>
+                <input class="fields__input-text js-required" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <svg class="fields__icon-mail js-icon">
                   <use xlink:href="img/all/sprite.svg#spr-icon-mail"></use>
                 </svg>
               </li>
+
               <li class="fields__item fields__item--contacts">
                 <label class="fields__label fields__label--text" for="phone">Телефон:*</label>
-                <input class="fields__input-text fields__input-text" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+                <input class="fields__input-text js-required" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+                <svg class="fields__icon-phone js-icon">
+                  <use xlink:href="img/all/sprite.svg#spr-icon-phone"></use>
+                </svg>
               </li>
             </ul>
           </fieldset>
@@ -153,19 +163,7 @@
         <div class="cooperation__map">
           <h2 class="visually-hidden">Карта</h2>
           <p class="cooperation__map-container">
-            <a class="cooperation__map-link">
-              <picture>
-                <source type="image/webp" srcset="img/all/bg-map-desktop@1x.webp 1x, img/all/bg-map-desktop@2x.webp 2x" media="(min-width: 1440px)">
-                <source type="image/webp" srcset="img/all/bg-map-tablet@1x.webp 1x, img/all/bg-map-tablet@2x.webp 2x" media="(min-width: 768px)">
-                <source type="image/webp" srcset="img/all/bg-map-tablet@1x.webp 1x, img/all/bg-map-tablet@2x.webp 2x" >
-                <source srcset="img/all/bg-map-desktop@1x.png 1x, img/all/bg-map-desktop@2x.png 2x" media="(min-width: 1440px)">
-                <source srcset="img/all/bg-map-tablet@1x.png 1x, img/all/bg-map-tablet@2x.png 2x" media="(min-width: 768px)">
-                <img
-                src="img/all/bg-map-mobile@1x.png"
-                srcset="img/all/bg-map-mobile@1x.png 1x, img/all/bg-map-mobile@2x.png 2x"
-                alt="Местоположение магазина по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
-              </picture>
-            </a>
+            <iframe class="cooperation__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.2186817662107!2d30.322835364407318!3d59.938895030138646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1541061592567" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
           </p>
         </div>
       </section>
@@ -220,5 +218,12 @@
         </div>
       </div>
     </footer>
+    <script src="js/picturefill.js"></script>
+    <script src="js/svg4everybody.js"></script>
+    <script src="js/main-nav.js"></script>
+    <script src="js/fields.js"></script>
+    <script>
+      svg4everybody();
+    </script>
   </body>
 </html>

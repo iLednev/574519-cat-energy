@@ -10,6 +10,7 @@
 }
 
 .program__heading {
+  max-width: 150px;
   position: relative;
   margin: 0;
   margin-bottom: 29px;
@@ -53,6 +54,7 @@
 }
 
 .program__description {
+  width: 226px;
   margin: 0;
   .standard-arial();
   margin-bottom: 44px;
@@ -60,7 +62,7 @@
 
 .program__link {
   position: relative;
-  // margin-bottom: 21px;
+  max-width: 180px;
   .font-settings(16px, 16px, 400);
   text-decoration: none;
   text-transform: uppercase;
@@ -70,7 +72,7 @@
     content: "";
     position: absolute;
     top: 3px;
-    left: 95px;
+    right: -40px;
     width: 24px;
     height: 11px;
     background-image: url("../img/backgrounds/icon-right-arrow-long.svg");
@@ -100,6 +102,7 @@
   }
 
   .program__heading {
+    max-width: 300px;
     margin-bottom: 25px;
     padding: 0;
     .font-settings(36px, 37px, 400);
@@ -140,12 +143,13 @@
   }
 
   .program__link {
+    max-width: 380px;
     .font-settings(20px, 20px, 400);
   }
 
   .program__link::after {
     top: 5px;
-    left: 132px;
+    right: -45px;
   }
 }
 
@@ -155,6 +159,7 @@
   }
 
   .program__heading {
+    max-width: 600px;
     margin-bottom: 75px;
     padding-left: 164px;
   }

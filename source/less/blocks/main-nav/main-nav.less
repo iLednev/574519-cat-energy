@@ -1,6 +1,11 @@
 .main-nav {
   .font-settings(20px, 20px, 600);
   text-transform: uppercase;
+  display: none;
+}
+
+.main-nav.show {
+  display: block;
 }
 
 .main-nav__list {
@@ -11,8 +16,10 @@
 }
 
 .main-nav__item {
+  max-width: 182px;
   padding-top: 24px;
   padding-bottom: 24px;
+  text-align: center;
 }
 
 .main-nav__link {
@@ -31,6 +38,7 @@
 @media (min-width: 768px) {
   .main-nav {
     .font-settings(18px, 25px, 400);
+    display: block;
   }
 
   .main-nav__list {
