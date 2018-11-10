@@ -70,24 +70,46 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1300px) {
+  .bgg {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 696px;
+    background-image: linear-gradient(to right, #ffffff 0, #ffffff 50%, @green 50%, @green 100%);
+  }
+
+  .bgg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 10px);
+    transform: translateX("-50%");
+    width: 50%;
+    height: 696px;
+    background-image:
+    url("../img/backgrounds/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
   .promo__content {
     padding-top: 222px;
-    padding-left: 190px;
-    padding-right: 110px;
+    padding-left: 120px;
+    padding-right: 40px;
     width: 1140px;
     min-height: 468px;
-    background-image:
-      url("../img/backgrounds/index-background-desktop@1x.jpg"),
-      linear-gradient(to right, #ffffff 0, #ffffff 50%, @green 50%, @green 100%);
+    // background-image:
+      // url("../img/backgrounds/index-background-desktop@1x.jpg"),
+      // linear-gradient(to right, #ffffff 0, #ffffff 50%, @green 50%, @green 100%);
+    // background-clip:
     background-repeat: no-repeat;
     background-position-x: 100%;
-    z-index: -1;
   }
 
   .promo__image-wrapper {
     top: 142px;
-    left: 560px;
+    left: 490px;
+    z-index: 1;
   }
 
   .promo__lead {
@@ -101,11 +123,11 @@
   }
 }
 
-@media (min-resolution: 1.5dppx) and (min-width: 1440px) {
+@media (min-resolution: 1.5dppx) and (min-width: 1300px) {
   .promo__content {
     background-image:
       url("../img/backgrounds/index-background-desktop@2x.jpg"),
       linear-gradient(to right, #ffffff 0, #ffffff 50%, @green 50%, @green 100%);
-    // background-size: 720px;
+
   }
 }

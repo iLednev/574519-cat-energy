@@ -10,12 +10,16 @@
   </head>
 
   <body class="body">
+    <div style="display: none">
+      <include src="build/img/all/sprite.svg"></include>
+    </div>
+
     <header class="body__header main-header">
       <div class="main-header__container">
         <p class="main-header__logo">
           <a class="main-header__logo-link" href="index.html">
             <picture>
-              <source srcset="img/all/logo-desktop.svg" media="(min-width: 1440px)">
+              <source srcset="img/all/logo-desktop.svg" media="(min-width: 1300px)">
               <source srcset="img/all/logo-tablet.svg" media="(min-width: 768px)">
               <img class="main-header__logo-image" src="img/all/logo-mobile.svg" alt="Логотип магазина">
             </picture>
@@ -40,6 +44,17 @@
           </ul>
         </nav>
       </div>
+      <noscript>
+        <style>
+          .main-header__button {
+            display: none;
+          }
+
+          .main-nav {
+            display: block;
+          }
+        </style>
+      </noscript>
     </header>
 
     <h1 class="body__main-heading body__main-heading--form">Подбор программы</h1>
@@ -51,93 +66,99 @@
             Заполните анкету и мы подберем программу питания для вашего кота
           </p>
 
-          <fieldset class="form__item form__item--information fields fields--information">
-            <ul class="fields__list fields__list--information">
+          <div class="ss">
+            <fieldset class="form__item form__item--information fields fields--information">
+              <ul class="fields__list fields__list--information">
+                <li class="fields__item">
+                  <label class="fields__label fields__label--text" for="cat-name">Имя:*</label>
+                  <input class="fields__input-text fields__input-text js-required" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
+                </li>
 
-              <li class="fields__item">
-                <label class="fields__label fields__label--text" for="cat-name">Имя:*</label>
-                <input class="fields__input-text fields__input-text js-required" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
-              </li>
+                <li class="fields__item">
+                  <label class="fields__label fields__label--text" for="cat-weight">Вес (кг):*</label>
+                  <input class="fields__input-text fields__input-text js-required" type="number" id="cat-weight" name="cat-weight" placeholder="7" required>
+                </li>
 
-              <li class="fields__item">
-                <label class="fields__label fields__label--text" for="cat-weight">Вес (кг):*</label>
-                <input class="fields__input-text fields__input-text js-required" type="number" id="cat-weight" name="cat-weight" placeholder="7" required>
-              </li>
+                <li class="fields__item">
+                  <label class="fields__label fields__label--text" for="cat-age">Возраст (лет):</label>
+                  <input class="fields__input-text fields__input-text" type="number" id="cat-age" name="cat-age" placeholder="7">
+                </li>
+              </ul>
+            </fieldset>
 
-              <li class="fields__item">
-                <label class="fields__label fields__label--text" for="cat-age">Возраст (лет):</label>
-                <input class="fields__input-text fields__input-text" type="number" id="cat-age" name="cat-age" placeholder="7">
-              </li>
+            <fieldset class="form__item form__item--target fields fields--target">
+              <ul class="fields__list">
+                <li class="fields__item fields__item--target">
+                  <input class="fields__input fields__input--check visually-hidden" type="radio" id="weight-loss" name="target-program" value="weight-loss" checked>
+                  <label class="fields__label" for="weight-loss">Похудение</label>
+                </li>
 
-            </ul>
-          </fieldset>
+                <li class="fields__item fields__item--target">
+                  <input class="fields__input fields__input--check visually-hidden" type="radio" id="weight-gain" name="target-program" value="weight-gain">
+                  <label class="fields__label" for="weight-gain">Набор массы</label>
+                </li>
 
-          <fieldset class="form__item form__item--target fields fields--target">
-            <ul class="fields__list">
-              <li class="fields__item fields__item--target">
-                <input class="fields__input fields__input--check visually-hidden" type="radio" id="weight-loss" name="target-program" value="weight-loss" checked>
-                <label class="fields__label" for="weight-loss">Похудение</label>
-              </li>
+                <li class="fields__item fields__item--target">
+                  <input class="fields__input fields__input--check visually-hidden" type="radio" id="need-advice" name="target-program" value="need-advice">
+                  <label class="fields__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
-              <li class="fields__item fields__item--target">
-                <input class="fields__input fields__input--check visually-hidden" type="radio" id="weight-gain" name="target-program" value="weight-gain">
-                <label class="fields__label" for="weight-gain">Набор массы</label>
-              </li>
+          <div class="form__legend">
+            <fieldset class="form__item form__item--contacts fields fields--contacts fields--legend">
+              <legend class="fields__legend fields__legend--contacts">Контактные данные (владельца кота)</legend>
+              <ul class="fields__list fields__list--contacts">
+                <li class="fields__item fields__item--contacts">
+                  <label class="fields__label fields__label--text" for="email" rq>E-mail:*</label>
+                  <input class="fields__input-text js-required" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+                  <svg class="fields__icon-mail js-icon">
+                    <use xlink:href="#spr-icon-mail"></use>
+                  </svg>
+                </li>
 
-              <li class="fields__item fields__item--target">
-                <input class="fields__input fields__input--check visually-hidden" type="radio" id="need-advice" name="target-program" value="need-advice">
-                <label class="fields__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
+                <li class="fields__item fields__item--contacts">
+                  <label class="fields__label fields__label--text" for="phone">Телефон:*</label>
+                  <input class="fields__input-text js-required" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+                  <svg class="fields__icon-phone js-icon">
+                    <use xlink:href="#spr-icon-phone"></use>
+                  </svg>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
-          <fieldset class="form__item form__item--contacts fields fields--contacts">
-            <legend class="fields__legend fields__legend--contacts">Контактные данные (владельца кота)</legend>
-            <ul class="fields__list fields__list--contacts">
-              <li class="fields__item fields__item--contacts">
-                <label class="fields__label fields__label--text" for="email" rq>E-mail:*</label>
-                <input class="fields__input-text js-required" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-                <svg class="fields__icon-mail js-icon">
-                  <use xlink:href="img/all/sprite.svg#spr-icon-mail"></use>
-                </svg>
-              </li>
+          <div class="form__legend">
+            <fieldset class="form__item form__item--comment fields fields--comment fields--legend">
+              <legend class="fields__legend fields__legend--comment">Комментарий</legend>
+              <textarea class="fields__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </fieldset>
+          </div>
 
-              <li class="fields__item fields__item--contacts">
-                <label class="fields__label fields__label--text" for="phone">Телефон:*</label>
-                <input class="fields__input-text js-required" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
-                <svg class="fields__icon-phone js-icon">
-                  <use xlink:href="img/all/sprite.svg#spr-icon-phone"></use>
-                </svg>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="form__item form__item--comment fields fields--comment">
-            <legend class="fields__legend fields__legend--comment">Комментарий</legend>
-            <textarea class="fields__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </fieldset>
-
-          <fieldset class="form__item form__item--addit fields fields--addit">
-            <legend class="fields__legend fields__legend--addit">Дополнительно</legend>
-            <ul class="fields__list fields__list--addit">
-              <li class="fields__item fields__item--addit">
-                <input class="fields__input fields__input--check visually-hidden" type="checkbox" id="sweetener" name="sweetener">
-                <label class="fields__label" for="sweetener">Сахарозаменитель</label>
-              </li>
-              <li class="fields__item fields__item--addit">
-                <input class="fields__input fields__input--check visually-hidden" type="checkbox" id="water" name="water">
-                <label class="fields__label" for="water">Питьевая вода</label>
-              </li>
-              <li class="fields__item fields__item--addit">
-                <input class="fields__input fields__input--check visually-hidden" type="checkbox" id="milk" name="milk">
-                <label class="fields__label" for="milk">Молоко</label>
-              </li>
-              <li class="fields__item fields__item--addit">
-                <input class="fields__input fields__input--check visually-hidden" type="checkbox" id="vitamins" name="vitamins">
-                <label class="fields__label" for="vitamins">Витамины</label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="form__legend">
+            <fieldset class="form__item form__item--addit fields fields--addit fields--legend">
+              <legend class="fields__legend fields__legend--addit">Дополнительно</legend>
+              <ul class="fields__list fields__list--addit">
+                <li class="fields__item fields__item--addit">
+                  <input class="fields__input fields__input--check visually-hidden" type="checkbox" id="sweetener" name="sweetener">
+                  <label class="fields__label" for="sweetener">Сахарозаменитель</label>
+                </li>
+                <li class="fields__item fields__item--addit">
+                  <input class="fields__input fields__input--check visually-hidden" type="checkbox" id="water" name="water">
+                  <label class="fields__label" for="water">Питьевая вода</label>
+                </li>
+                <li class="fields__item fields__item--addit">
+                  <input class="fields__input fields__input--check visually-hidden" type="checkbox" id="milk" name="milk">
+                  <label class="fields__label" for="milk">Молоко</label>
+                </li>
+                <li class="fields__item fields__item--addit">
+                  <input class="fields__input fields__input--check visually-hidden" type="checkbox" id="vitamins" name="vitamins">
+                  <label class="fields__label" for="vitamins">Витамины</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
           <div class="form__end">
             <button class="form__submit button button--submit" type="submit">Отправить заявку</button>
@@ -183,7 +204,7 @@
               <a class="social__item" href="#">
                 <span class="visually-hidden">ВКонтакте</span>
                 <svg class="social__vk">
-                  <use xlink:href="img/all/sprite.svg#spr-icon-vk"></use>
+                  <use xlink:href="#spr-icon-vk"></use>
                 </svg>
               </a>
             </li>
@@ -192,7 +213,7 @@
               <a class="social__item" href="#">
                 <span class="visually-hidden">Instagram</span>
                 <svg class="social__inst">
-                  <use xlink:href="img/all/sprite.svg#spr-icon-insta"></use>
+                  <use xlink:href="#spr-icon-insta"></use>
                 </svg>
               </a>
             </li>
@@ -201,7 +222,7 @@
               <a class="social__item" href="#">
                 <span class="visually-hidden">Facebook</span>
                 <svg class="social__fb">
-                  <use xlink:href="img/all/sprite.svg#spr-icon-fb"></use>
+                  <use xlink:href="#spr-icon-fb"></use>
                 </svg>
               </a>
             </li>
@@ -211,7 +232,7 @@
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <span class="copyright__text">HTML Academy</span>
               <svg class="copyright__image" width="39" height="47">
-                <use xlink:href="img/all/sprite.svg#spr-htmlacademy"></use>
+                <use xlink:href="#spr-htmlacademy"></use>
               </svg>
             </a>
           </div>

@@ -10,6 +10,10 @@
   </head>
 
   <body class="body body--main">
+    <div style="display: none">
+      <include src="build/img/all/sprite.svg"></include>
+    </div>
+
     <h1 class="visually-hidden">Интернет-магазин кошачьего спортпита "Cat Energy"</h1>
 
     <header class="body__header body__header--position main-header">
@@ -17,7 +21,7 @@
         <p class="main-header__logo">
           <a class="main-header__logo-link">
             <picture>
-              <source srcset="img/all/logo-desktop.svg" media="(min-width: 1440px)">
+              <source srcset="img/all/logo-desktop.svg" media="(min-width: 1300px)">
               <source srcset="img/all/logo-tablet.svg" media="(min-width: 768px)">
               <img class="main-header__logo-image" src="img/all/logo-mobile.svg" alt="Логотип магазина">
             </picture>
@@ -42,20 +46,32 @@
           </ul>
         </nav>
       </div>
+      <noscript>
+        <style>
+          .main-header__button {
+            display: none;
+          }
+
+          .main-nav {
+            display: block;
+          }
+        </style>
+      </noscript>
     </header>
 
     <main>
       <section class="body__promo promo">
+        <div class="bgg"></div>
         <div class="body__item  promo__content">
           <h2 class="promo__heading">Функциональное питание для котов</h2>
           <p class="promo__lead">Занялся собой? Займись котом!</p>
           <p class="promo__image-wrapper">
             <picture class="promo__image-picture">
-              <source type="image/webp" srcset="img/all/index-can-desktop@1x.webp 1x, img/all/index-can-desktop@2x.webp 2x" media="(min-width: 1440px)">
+              <source type="image/webp" srcset="img/all/index-can-desktop@1x.webp 1x, img/all/index-can-desktop@2x.webp 2x" media="(min-width: 1300px)">
               <source type="image/webp" srcset="img/all/index-can-tablet@1x.webp 1x, img/all/index-can-tablet@2x.webp 2x" media="(min-width: 768px)">
               <source type="image/webp" srcset="img/all/index-can-mobile@1x.webp 1x, img/all/index-can-mobile@2x.webp 2x">
 
-              <source srcset="img/all/index-can-desktop@1x.png 1x, img/all/index-can-desktop@2x.png 2x" media="(min-width: 1440px)">
+              <source srcset="img/all/index-can-desktop@1x.png 1x, img/all/index-can-desktop@2x.png 2x" media="(min-width: 1300px)">
               <source srcset="img/all/index-can-tablet@1x.jpg 1x, img/all/index-can-tablet@2x.jpg 2x" media="(min-width: 768px)">
               <img class="promo__image"
                 src="img/all/index-can-mobile@1x.png"
@@ -80,7 +96,7 @@
                   Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
                   Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
                 </p>
-                <a class="program__link" href="catalog.html">Каталог Slim</a>
+                <a class="program__link" href="catalog.html#catalog-slim">Каталог Slim</a>
               </article>
             </li>
 
@@ -91,7 +107,7 @@
                   Заработать авторитет среди дворовых котов и даже собак?
                   Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
                 </p>
-                <a class="program__link" href="catalog.html">Каталог Pro</a>
+                <a class="program__link" href="catalog.html#catalog-pro">Каталог Pro</a>
               </article>
             </li>
           </ul>
@@ -116,7 +132,7 @@
             </li>
             <li class="how-works__item">
               <div class="how-works__icon how-works__icon--clock"></div>
-              <p class="how-works__description">Уже через месяц наслаждайтесь изменениями к <span>лучшему</span> вашего питомца!</p>
+              <p class="how-works__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</p>
             </li>
           </ul>
       </section>
@@ -150,10 +166,10 @@
           <div class="example__slider">
             <p class="example__slide">
               <picture>
-                <source type="image/webp" srcset="img/all/before-desktop@1x.webp 1x, img/all/before-desktop@2x.webp 2x" media="(min-width: 1440px)">
+                <source type="image/webp" srcset="img/all/before-desktop@1x.webp 1x, img/all/before-desktop@2x.webp 2x" media="(min-width: 1300px)">
                 <source type="image/webp" srcset="img/all/before-tablet@1x.webp 1x, img/all/before-tablet@2x.webp 2x" media="(min-width: 768px)">
                 <source type="image/webp" srcset="img/all/before-tablet@1x.webp 1x, img/all/before-tablet@2x.webp 2x">
-                <source srcset="img/all/before-desktop@1x.png 1x, img/all/before-desktop@2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="img/all/before-desktop@1x.png 1x, img/all/before-desktop@2x.png 2x" media="(min-width: 1300px)">
                 <source srcset="img/all/before-tablet@1x.png 1x, img/all/before-tablet@2x.png 2x" media="(min-width: 768px)">
                 <img class="example__photo"
                 src="img/all/before-mobile@1x.png"
@@ -164,10 +180,10 @@
             </p>
             <p class="example__slide example__slide--hidden">
               <picture>
-                <source type="image/webp" srcset="img/all/after-desktop@1x.webp 1x, img/all/after-desktop@2x.webp 2x" media="(min-width: 1440px)">
+                <source type="image/webp" srcset="img/all/after-desktop@1x.webp 1x, img/all/after-desktop@2x.webp 2x" media="(min-width: 1300px)">
                 <source type="image/webp" srcset="img/all/after-tablet@1x.webp 1x, img/all/after-tablet@2x.webp 2x" media="(min-width: 768px)">
                 <source type="image/webp" srcset="img/all/after-tablet@1x.webp 1x, img/all/after-tablet@2x.webp 2x">
-                <source srcset="img/all/after-desktop@1x.png 1x, img/all/after-desktop@2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="img/all/after-desktop@1x.png 1x, img/all/after-desktop@2x.png 2x" media="(min-width: 1300px)">
                 <source srcset="img/all/after-tablet@1x.png 1x, img/all/after-tablet@2x.png 2x" media="(min-width: 768px)">
                 <img class="example__photo"
                 src="img/all/after-mobile@1x.png"
@@ -188,7 +204,6 @@
           </div>
         </div>
       </section>
-      <script src="js/switcher.js"></script>
 
       <section class="cooperation">
         <div class="cooperation__wrapper">
@@ -227,7 +242,7 @@
               <a class="social__item" href="#">
                 <span class="visually-hidden">ВКонтакте</span>
                 <svg class="social__vk">
-                  <use xlink:href="img/all/sprite.svg#spr-icon-vk"></use>
+                  <use xlink:href="#spr-icon-vk"></use>
                 </svg>
               </a>
             </li>
@@ -236,7 +251,7 @@
               <a class="social__item" href="#">
                 <span class="visually-hidden">Instagram</span>
                 <svg class="social__inst">
-                  <use xlink:href="img/all/sprite.svg#spr-icon-insta"></use>
+                  <use xlink:href="#spr-icon-insta"></use>
                 </svg>
               </a>
             </li>
@@ -245,7 +260,7 @@
               <a class="social__item" href="#">
                 <span class="visually-hidden">Facebook</span>
                 <svg class="social__fb">
-                  <use xlink:href="img/all/sprite.svg#spr-icon-fb"></use>
+                  <use xlink:href="#spr-icon-fb"></use>
                 </svg>
               </a>
             </li>
@@ -255,13 +270,14 @@
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <span class="copyright__text">HTML Academy</span>
               <svg class="copyright__image" width="39" height="47">
-                <use xlink:href="img/all/sprite.svg#spr-htmlacademy"></use>
+                <use xlink:href="#spr-htmlacademy"></use>
               </svg>
             </a>
           </div>
         </div>
       </div>
     </footer>
+    <script src="js/switcher.js"></script>
     <script src="js/picturefill.js"></script>
     <script src="js/svg4everybody.js"></script>
     <script src="js/main-nav.js"></script>

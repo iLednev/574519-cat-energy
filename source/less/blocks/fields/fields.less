@@ -1,4 +1,13 @@
+.ss {
+  margin: 0 auto;
+  // width: 1300px;
+  display: flex;
+  flex-direction: column;
+}
+
 .fields {
+  width: 280px;
+  .base-paddings();
   position: relative;
   display: flex;
   flex-direction: column;
@@ -128,6 +137,7 @@
 }
 
 .fields__legend {
+  max-width: 184px;
   padding: 0;
   position: relative;
   .font-settings(24px, 24px, 400);
@@ -135,37 +145,24 @@
   &::before {
     content: "";
     position: absolute;
-    top: 16px;
-    height: 3px;
-    background-color: @green;
+    left: -20px;
+    width: calc(100% + 42px);
+    height: 100%;
+    background-color: #ffffff;
+    z-index: -1;
   }
 }
 
 .fields__legend--contacts {
   margin-bottom: 34px;
-
-  &::before {
-    right: -20px;
-    width: 99px;
-  }
 }
 
 .fields__legend--comment {
   margin-bottom: 35px;
-
-  &::before {
-    right: -180px;
-    width: 158px;
-  }
 }
 
 .fields__legend--addit {
   margin-bottom: 42px;
-
-  &::before {
-    right: -159px;
-    width: 136px;
-  }
 }
 
 .fields__comment {
@@ -284,19 +281,13 @@
   }
 
   .fields__legend {
+    max-width: 514px;
     .font-settings(36px, 36px, 400);
 
     &::before {
-      top: 22px;
-      left: -70px;
-      width: 768px;
-      z-index: -1;
-    }
-
-    &::after {
       content: "";
       position: absolute;
-      left: -39px;
+      left: -40px;
       width: calc(100% + 78px);
       height: 100%;
       background-color: #ffffff;
@@ -404,9 +395,21 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1300px) {
+  .ss {
+    margin: 0 auto;
+    width: 1300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .fields {
     width: 570px;
+  }
+
+  .fields--comment {
+    width: 1220px;
   }
 
   .fields--contacts {
@@ -427,9 +430,8 @@
     width: 1220px;
   }
 
-  .fields__legend::before {
-    left: -110px;
-    width: 1440px;
+  .fields__legend {
+    max-width: 804px;
   }
 
   .fields__item--target label {

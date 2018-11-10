@@ -15,6 +15,8 @@ var del = require("del");
 var htmlmin = require("gulp-htmlmin");
 var jsmin = require("gulp-uglify");
 var pump = require("pump");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
 
 gulp.task("copy", function() {
   return gulp.src([
@@ -56,6 +58,9 @@ gulp.task("sprite", function() {
 
 gulp.task("html", function() {
   return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build/"));
 });

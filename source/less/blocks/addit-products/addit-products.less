@@ -89,7 +89,23 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1300px) {
+  .addit-products {
+    position: relative;
+  }
+
+  .addit-products::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 0;
+    width: 100vw;
+    height: 3px;
+    background-color: @green;
+    z-index: -1;
+  }
+
   .addit-products__content {
     flex-direction: row;
     flex-wrap: wrap;
@@ -102,18 +118,6 @@
     width: 340px;
     position: relative;
     margin-left: 0;
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 21px;
-      left: -110px;
-      width: 1440px;
-      height: 3px;
-      background-color: @green;
-      z-index: -1;
-    }
 
     &::after {
       content: "";
