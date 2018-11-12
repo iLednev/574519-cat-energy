@@ -27,6 +27,7 @@
 }
 
 .main-header__button {
+  display: none;
   position: relative;
   padding: 0;
   width: 24px;
@@ -58,6 +59,10 @@
   }
 }
 
+.main-header__button.show {
+  display: block;
+}
+
 .main-header__button.active {
   &::before {
     transform: rotate(45deg);
@@ -83,7 +88,8 @@
     align-items: center;
     margin-bottom: 20px;
     .base-paddings-tablet();
-    width: 708px;
+    padding-right: 21px;
+    width: 717px;
   }
 
   .main-header__logo {
@@ -105,7 +111,8 @@
   .main-header__container {
     padding-top: 14px;
     .base-paddings-desktop();
-    width: 1220px;
+    padding-right: 29px;
+    width: 1231px;
   }
 
   .main-header__logo {

@@ -71,7 +71,7 @@
 }
 
 @media (min-width: 1300px) {
-  .bgg {
+  .promo__background {
     position: absolute;
     top: 0;
     width: 100%;
@@ -79,7 +79,7 @@
     background-image: linear-gradient(to right, #ffffff 0, #ffffff 50%, @green 50%, @green 100%);
   }
 
-  .bgg::before {
+  .promo__background::before {
     content: "";
     position: absolute;
     top: 0;
@@ -88,6 +88,7 @@
     width: 50%;
     height: 696px;
     background-image: url("../img/backgrounds/index-background-desktop@1x.jpg");
+    background-size: 720px;
     background-repeat: no-repeat;
     background-position-x: 100%;
   }
@@ -114,13 +115,13 @@
 }
 
 @media (min-resolution: 1.5dppx) and (max-width: 767px) {
-  .promo__content {
+  .promo__background::before {
     background-image: url("../img/backgrounds/index-background-mobile@2x.jpg");
   }
 }
 
 @media (min-resolution: 1.5dppx) and (min-width: 1300px) {
-  .promo__content {
+  .promo__background::before {
     background-image:
       url("../img/backgrounds/index-background-desktop@2x.jpg"),
       linear-gradient(to right, #ffffff 0, #ffffff 50%, @green 50%, @green 100%);

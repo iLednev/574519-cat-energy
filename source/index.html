@@ -61,7 +61,7 @@
 
     <main>
       <section class="body__promo promo">
-        <div class="bgg"></div>
+        <div class="promo__background"></div>
         <div class="body__item  promo__content">
           <h2 class="promo__heading">Функциональное питание для котов</h2>
           <p class="promo__lead">Занялся собой? Займись котом!</p>
@@ -194,13 +194,11 @@
               </picture>
             </p>
             <div class="example__switcher">
-              <label class="example__label js-first-label" for="before">Было</label>
-              <input class="example__switch visually-hidden js-first-radio" type="radio" name="slider-switcher" id="before" checked>
+              <button class="example__button js-first-button" for="before">Было</button>
               <div class="example__switch-line">
-                <div class="example__toggle"></div>
+                <button class="example__toggle"></button>
               </div>
-              <input class="example__switch visually-hidden js-second-radio" type="radio" name="slider-switcher" id="after">
-              <label class="example__label js-second-label" for="after">Стало</label>
+              <button class="example__button js-second-button" for="after">Стало</button>
             </div>
           </div>
         </div>
@@ -239,8 +237,8 @@
           </p>
 
           <ul class="main-footer__social social">
-            <li>
-              <a class="social__item" href="#">
+            <li class="social__item">
+              <a href="#">
                 <span class="visually-hidden">ВКонтакте</span>
                 <svg class="social__vk">
                   <use xlink:href="#spr-icon-vk"></use>
@@ -248,8 +246,8 @@
               </a>
             </li>
 
-            <li>
-              <a class="social__item" href="#">
+            <li class="social__item">
+              <a href="#">
                 <span class="visually-hidden">Instagram</span>
                 <svg class="social__inst">
                   <use xlink:href="#spr-icon-insta"></use>
@@ -257,8 +255,8 @@
               </a>
             </li>
 
-            <li>
-              <a class="social__item" href="#">
+            <li class="social__item">
+              <a href="#">
                 <span class="visually-hidden">Facebook</span>
                 <svg class="social__fb">
                   <use xlink:href="#spr-icon-fb"></use>
